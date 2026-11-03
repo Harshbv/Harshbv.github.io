@@ -1,0 +1,4 @@
+cv/*.tex
+cv/*.json
+cv/*.py
+__pycache__/
