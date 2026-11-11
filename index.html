@@ -3,823 +3,705 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Harshini BV · வணக்கம்</title>
+<title>Harshini BV · Software, AI & ML Engineer</title>
+<meta name="description" content="Harshini BV: software, AI and ML engineer. MS Computer Science, Arizona State University, graduating 2027.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Yeseva+One&family=Anek+Latin:wght@300;400;500;600;700&family=Anek+Tamil:wght@400;600;700&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <style>
+/* newsprint: warm grey paper, black ink, greys only */
 :root{
-  --bg:#FBF6EC; --card:#FFFAF1; --ink:#1B1714; --muted:#6B5D52;
-  --maroon:#7A1F2B; --gold:#C9A227; --peacock:#0F5E73; --turmeric:#E3A018;
-  --leaf:#2F6B3A; --plum:#5E1F33; --line:rgba(122,31,43,.14);
-  --kolam:rgba(122,31,43,.55); --shadow:0 10px 30px rgba(122,31,43,.10);
-  --beat:120ms;
-}
-body.night{
-  --bg:#16100D; --card:#22181399; --ink:#F3E6C8; --muted:#BBA88F;
-  --maroon:#D0566A; --gold:#E6BE45; --peacock:#3FA7BF; --line:rgba(230,190,69,.18);
-  --kolam:rgba(230,190,69,.6); --shadow:0 10px 40px rgba(230,150,40,.10);
+  --paper:#F1EADB; --ink:#141414; --muted:#4E4B47; --hair:#C9C3B6; --rule:#141414; --red:#C4161C; --blue:#9DB4C0; --blue-soft:#E2E6E1; --blue-ink:#4A6274;
+  --accent:#141414; --tint:#E8E4DA; --flash:#DEDAD0; --bar:#9A968F;
+  --serif:"Libre Caslon Text",Georgia,serif; --display:"Old Standard TT",Georgia,serif; --sans:"Old Standard TT",Georgia,serif; --black:"UnifrakturMaguntia",serif;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--ink);font-family:"Anek Latin",system-ui,sans-serif;font-size:18px;line-height:1.55;overflow-x:hidden;transition:background .6s,color .6s}
-body.night::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
-  background:radial-gradient(circle at 92% 4%,rgba(255,170,60,.22),transparent 45%),radial-gradient(circle at 10% 100%,rgba(208,86,106,.10),transparent 40%)}
-.ta{font-family:"Anek Tamil",sans-serif}
-h1,h2,h3{font-family:"Yeseva One",serif;font-weight:400;line-height:1.1}
+html{scroll-behavior:smooth;scroll-padding-top:16px}
+body{background:var(--paper);color:var(--ink);font-family:var(--serif);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
 a{color:inherit}
-button{font:inherit;cursor:pointer}
-.wrap{max-width:1150px;margin:0 auto;padding:0 24px;position:relative;z-index:1}
+.page{max-width:1240px;margin:0 auto;padding:0 28px}
+.label{font-family:var(--sans);font-size:11.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase}
+.kicker{font-family:var(--sans);font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);margin-bottom:8px}
+h1,h2,h3{font-family:var(--display);font-weight:700;line-height:1.08;letter-spacing:-.005em}
+body{font-size:16.5px}
+.dbl{border-top:3px solid var(--rule);box-shadow:0 -6px 0 -5px var(--rule)}
 
-/* zari border */
-.zari{height:16px;border-top:2px solid var(--gold);border-bottom:2px solid var(--gold);
-  background:
-   linear-gradient(135deg,var(--gold) 25%,transparent 25%) -8px 0/16px 12px,
-   linear-gradient(225deg,var(--gold) 25%,transparent 25%) -8px 0/16px 12px,
-   var(--maroon);position:relative;z-index:1}
-.zari.thick{height:40px;background:
-   radial-gradient(circle,var(--gold) 3px,transparent 3.5px) 0 0/20px 40px,
-   linear-gradient(135deg,var(--gold) 25%,transparent 25%) -10px 28px/20px 12px,
-   linear-gradient(225deg,var(--gold) 25%,transparent 25%) -10px 28px/20px 12px,
-   linear-gradient(var(--maroon) 70%,var(--peacock) 70%)}
+/* ---------- masthead ---------- */
+.topbar{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid var(--hair);color:var(--muted)}
+.topbar a{text-decoration:none}
+.topbar .cv{color:var(--ink);border:1px solid var(--ink);padding:5px 12px;transition:background .2s,color .2s}
+.topbar .cv:hover{background:var(--ink);color:var(--paper)}
+.mast{display:grid;grid-template-columns:190px 1fr 190px;align-items:center;gap:20px;padding:26px 0 18px}
+.ear{border:1px solid var(--rule);padding:10px 12px;font-family:var(--sans);font-size:12px;line-height:1.45;text-align:center}
+.ear b{display:block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:3px}
+.name{font-family:var(--display);font-weight:700;font-size:clamp(46px,8.6vw,118px);line-height:.95;text-align:center;color:var(--red);white-space:nowrap;text-transform:uppercase;letter-spacing:.04em}
+.motto{text-align:center;font-family:var(--display);font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-top:10px;font-size:clamp(15px,2vw,22px)}
+.dateline{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;border-bottom:1px solid var(--rule);padding:7px 0;margin-top:4px}
+.index{display:flex;justify-content:center;gap:26px;flex-wrap:wrap;padding:10px 0;border-bottom:1px solid var(--hair)}
+.index a{text-decoration:none;position:relative}
+.index a b{margin-right:6px;border:1px solid var(--ink);padding:1px 5px}
+.index a::after{content:"";position:absolute;left:0;right:100%;bottom:-4px;height:1px;background:var(--ink);transition:right .3s}
+.index a:hover::after{right:0}
 
-/* progress jasmine string */
-#progress{position:fixed;top:0;left:0;height:4px;width:0;z-index:50;
-  background:repeating-linear-gradient(90deg,#fff 0 6px,var(--gold) 6px 9px);box-shadow:0 0 8px rgba(201,162,39,.6)}
+/* ---------- running head between sections ---------- */
+.runhead{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-top:46px;padding:8px 0;border-bottom:1px solid var(--rule)}
+.runhead .sec{font-family:var(--display);font-weight:700;font-size:clamp(26px,3.4vw,38px);letter-spacing:-.01em}
+.runhead .sec b{font-family:var(--sans);font-size:.42em;letter-spacing:.14em;vertical-align:middle;margin-right:12px;border:1px solid var(--ink);padding:3px 8px}
 
-/* nav */
-nav{position:sticky;top:0;z-index:40;backdrop-filter:blur(10px);background:color-mix(in srgb,var(--bg) 82%,transparent);border-bottom:1px solid var(--line)}
-nav .wrap{display:flex;align-items:center;justify-content:space-between;height:66px}
-.logo{font-family:"Yeseva One";font-size:24px;text-decoration:none;color:var(--maroon)}
-.logo span{color:var(--gold)}
-.links{display:flex;gap:26px;align-items:center}
-.links a{text-decoration:none;font-weight:500;position:relative}
-.links a::after{content:"";position:absolute;left:0;right:100%;bottom:-4px;height:6px;transition:right .35s;
-  background:radial-gradient(circle,var(--gold) 2px,transparent 2.5px) 0 0/8px 6px}
-.links a:hover::after{right:0}
-.links a.cv-link{background:var(--maroon);color:#FBF6EC;padding:5px 14px;border-radius:20px}
-.links a.cv-link::after{display:none}
-#lamp{background:none;border:none;width:42px;height:46px;display:grid;place-items:center}
-#lamp .flame{opacity:0;transform-origin:50% 100%;transition:opacity .4s}
-body.night #lamp .flame{opacity:1;animation:flicker 1.3s infinite alternate}
-@keyframes flicker{0%{transform:scale(1,1) rotate(-2deg)}50%{transform:scale(.92,1.08) rotate(2deg)}100%{transform:scale(1.05,.95) rotate(-1deg)}}
-body.night #lamp .glow{opacity:.8}
-#lamp .glow{opacity:0;transition:opacity .4s}
+/* ---------- front page ---------- */
+.front{display:grid;grid-template-columns:2.15fr 1fr;padding:28px 0 8px}
+.lead{padding-right:30px;border-right:1px solid var(--hair)}
+.side{padding-left:30px}
+.lead h1{font-size:clamp(34px,4.6vw,58px);margin-bottom:14px;text-align:center}
+.lead .kicker,.lead .dek{text-align:center;margin-left:auto;margin-right:auto}
+.dek{font-size:21px;line-height:1.45;color:var(--muted);font-style:italic;margin-bottom:14px;max-width:46em}
+.byline{font-family:var(--sans);font-size:12.5px;color:var(--muted);padding:8px 0;border-top:1px solid var(--hair);border-bottom:1px solid var(--hair);margin-bottom:20px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.cols{column-count:2;column-gap:26px;column-rule:1px solid var(--hair)}
+.cols p{margin-bottom:12px;text-align:justify;hyphens:auto}
+.cols h4{break-after:avoid;font-family:var(--sans);font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin:4px 0 6px}
+.cols ul{padding-left:16px;margin-bottom:12px}
+.cols li{margin-bottom:6px;break-inside:avoid}
+.drop::first-letter{font-family:var(--display);font-weight:700;float:left;font-size:66px;line-height:.82;padding:6px 8px 0 0}
+.pull{column-span:all;border-top:2px solid var(--rule);border-bottom:1px solid var(--rule);padding:16px 0;margin:6px 0 16px;font-family:var(--display);font-style:italic;font-weight:600;font-size:clamp(22px,2.6vw,28px);line-height:1.28;text-align:center}
 
-/* hero */
-.hero{min-height:calc(100vh - 66px);display:grid;grid-template-columns:1.05fr 1fr;align-items:center;gap:30px;padding:40px 0 70px}
-.greet{font-size:clamp(40px,6vw,64px);color:var(--maroon);display:inline-block;animation:sway 3s ease-in-out infinite}
-@keyframes sway{50%{transform:rotate(-2deg) translateY(-3px)}}
-.hero h1{font-size:clamp(46px,7vw,86px);margin:4px 0 14px}
-.hero h1 .gold{color:var(--gold);font-style:italic}
-.typed{font-size:22px;min-height:68px;color:var(--peacock);font-weight:600}
-.typed::after{content:"|";animation:blink .9s steps(1) infinite;color:var(--gold)}
-@keyframes blink{50%{opacity:0}}
-.hero p.lede{color:var(--muted);max-width:520px;margin:6px 0 26px}
-.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 24px;border-radius:40px;border:2px solid var(--maroon);text-decoration:none;font-weight:600;transition:transform .2s,box-shadow .2s,background .2s}
-.btn.primary{background:var(--maroon);color:#FBF6EC}
-.btn:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
-.btn.ghost{color:var(--maroon)}
-.btns{display:flex;gap:14px;flex-wrap:wrap}
+.box{border:1px solid var(--rule);padding:18px;margin-bottom:22px}
+.box-head{font-family:var(--display);font-weight:800;font-size:21px;padding-bottom:8px;margin-bottom:6px;border-bottom:1px solid var(--rule)}
+.num{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:baseline;padding:12px 0;border-bottom:1px solid var(--hair)}
+.num:last-child{border-bottom:none}
+.num b{font-family:var(--display);font-weight:700;font-size:40px;line-height:1;min-width:110px;white-space:nowrap}
+.num b small{font-size:.5em;color:var(--muted);font-weight:700}
+.num span{font-family:var(--sans);font-size:13px;line-height:1.4}
+.inside a{display:flex;justify-content:space-between;gap:10px;padding:8px 0;border-bottom:1px dotted var(--hair);text-decoration:none;font-family:var(--sans);font-size:14px;font-weight:600}
+.inside a:last-child{border-bottom:none}
+.inside a span{font-weight:700}
+.inside a:hover{text-decoration:underline;text-underline-offset:3px}
 
-.stage{position:relative;aspect-ratio:1;max-width:520px;width:100%;justify-self:center}
-#kolam{position:absolute;inset:0;width:100%;height:100%;animation:spin 140s linear infinite}
-@keyframes spin{to{transform:rotate(360deg)}}
-#kolam path{fill:none;stroke:var(--kolam);stroke-width:2.6;stroke-linecap:round}
-#kolam circle{fill:var(--gold);transform-box:fill-box;transform-origin:center;animation:pop .4s backwards}
-@keyframes pop{from{transform:scale(0)}}
-.ring{position:absolute;inset:25%;border-radius:50%;overflow:hidden;cursor:pointer;
-  background:radial-gradient(circle at 50% 35%,#F2C46A,#E3A018 45%,#B5761A);
-  box-shadow:0 0 0 6px var(--bg),0 0 0 9px var(--gold),0 0 0 14px var(--bg),0 0 0 16px var(--maroon),var(--shadow);
-  transition:transform .3s}
-.ring:hover{transform:scale(1.03)}
-body.night .ring{box-shadow:0 0 0 6px var(--bg),0 0 0 9px var(--gold),0 0 0 14px var(--bg),0 0 0 16px var(--maroon),0 0 60px rgba(255,170,60,.45)}
-.ring svg{position:absolute;width:118%;bottom:-14%;left:-9%}
-.sway1{transform-box:view-box;transform-origin:160px 60px;animation:hair 4s ease-in-out infinite}
-.sway2{transform-box:view-box;transform-origin:160px 130px;animation:hair 3.3s ease-in-out infinite reverse}
-@keyframes hair{50%{transform:rotate(1.6deg)}}
-#head{transform-box:view-box;transform-origin:160px 240px;transition:transform .25s ease-out}
-#glasses{transition:transform .45s cubic-bezier(.3,1.7,.5,1)}
-.ring:hover #glasses,.ring.peek #glasses{transform:translateY(-30px)}
-.eye{transform-box:fill-box;transform-origin:center;animation:eyeblink 4.5s infinite}
-@keyframes eyeblink{0%,94%,100%{transform:scaleY(1)}97%{transform:scaleY(.1)}}
-.eye.wink{animation:none;transform:scaleY(.1)}
-.pupil{transition:transform .15s}
-.bubble{position:absolute;top:6%;left:-4%;background:var(--card);border:2px solid var(--maroon);border-radius:18px 18px 18px 4px;
-  padding:10px 16px;font-weight:600;box-shadow:var(--shadow);max-width:230px;opacity:0;transform:translateY(10px) scale(.9);
-  transition:.3s;pointer-events:none;z-index:3}
-body.night .bubble{background:#2a1e18}
-.bubble.show{opacity:1;transform:none}
-.kolam-btn{position:absolute;bottom:0;right:2%;z-index:3;background:var(--card);border:1.5px solid var(--gold);border-radius:30px;padding:7px 14px;font-size:14px;color:var(--ink)}
-body.night .kolam-btn{background:#2a1e18}
-.kolam-btn:hover{background:var(--gold);color:#1B1714}
-.hint{font-size:13px;color:var(--muted);position:absolute;bottom:0;left:2%;z-index:3}
+/* top stories (teasers that jump inside) */
+.tops{display:grid;grid-template-columns:repeat(3,1fr);margin-top:22px}
+.tops article{padding:16px 18px 12px;border:1px solid var(--rule);margin:14px 8px 0;text-align:center}
+.tops article .stat{justify-content:center}
 
-/* maroon + gold hero band */
-.hero-band{position:relative;overflow:hidden;color:#FBF6EC;
-  background:radial-gradient(circle at 74% 48%,#A22E40 0,#7A1F2B 38%,#561320 100%)}
-body.night .hero-band{background:radial-gradient(circle at 74% 48%,#4E1A23 0,#2C0E14 55%,#1A090C 100%)}
-.hero-band::after{content:"";position:absolute;inset:0;pointer-events:none;
-  background:radial-gradient(circle,rgba(230,190,69,.5) 1px,transparent 1.5px) 0 0/34px 34px;opacity:.18}
-#kolamBig{position:absolute;width:120vmax;height:120vmax;left:-48vmax;top:50%;transform:translateY(-50%);opacity:.24;pointer-events:none;animation:spin2 260s linear infinite}
-@keyframes spin2{to{transform:translateY(-50%) rotate(-360deg)}}
-#kolamBig path{fill:none;stroke:#E6BE45;stroke-width:1.6;stroke-linecap:round}
-#kolamBig circle{fill:#E6BE45;transform-box:fill-box;transform-origin:center;animation:pop .4s backwards}
-.hero-band .hero{position:relative;z-index:2}
-.hero-band .greet{color:#F2C46A}
-.hero-band h1{color:#FBF6EC;font-size:clamp(50px,7.4vw,108px);white-space:nowrap}
-.hero-band h1 .gold{color:#E6BE45;text-shadow:0 0 34px rgba(230,190,69,.45)}
-.hero-band .typed{color:#FFD58A}
-.hero-band .typed::after{color:#FBF6EC}
-.hero-band p.lede{color:rgba(251,246,236,.84)}
-.hero-band .btn.primary{background:#E6BE45;color:#561320;border-color:#E6BE45}
-.hero-band .btn.ghost{color:#FBF6EC;border-color:rgba(251,246,236,.8)}
-.hero-band .stage{max-width:600px}
-.hero-band #kolam path{stroke:rgba(242,196,106,.9)}
-.hero-band #kolam circle{fill:#FBF6EC}
-.hero-band .ring,body.night .hero-band .ring{box-shadow:0 0 0 6px #6A1A26,0 0 0 9px #E6BE45,0 0 0 15px #6A1A26,0 0 0 17px #E6BE45,0 0 70px rgba(230,190,69,.4)}
-.hero-band .hint{color:rgba(251,246,236,.7)}
-.hero-band .kolam-btn{background:rgba(0,0,0,.18);color:#FBF6EC;border-color:#E6BE45}
-.hero-band .kolam-btn:hover{background:#E6BE45;color:#561320}
-.hero-band .bubble{color:#1B1714}
-body.night .hero-band .bubble{color:#F3E6C8}
-#trail{position:fixed;inset:0;width:100vw;height:100vh;pointer-events:none;z-index:55}
+.tops article:first-child{margin-left:0}.tops article:last-child{margin-right:0}
+.tops h2{font-size:22px;margin-bottom:8px;padding-bottom:8px;border-bottom:1px solid var(--rule)}
+.tops p{font-size:15.5px;margin-bottom:8px}
+.stat{font-family:var(--sans);font-weight:700;font-size:13px;color:var(--muted);display:flex;gap:8px;align-items:baseline;margin-bottom:6px;flex-wrap:wrap}
+.stat span{font-family:var(--display);font-size:22px;font-weight:800;color:var(--ink)}
+.jump{font-family:var(--sans);font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;font-style:normal}
+.jump:hover{text-decoration:underline;text-underline-offset:3px}
+.jumpline{font-family:var(--sans);font-size:12px;color:var(--muted);font-style:italic}
 
-/* marquee */
-.marquee{overflow:hidden;background:var(--maroon);color:#FBF6EC;padding:12px 0;position:relative;z-index:1}
-.marquee .track{display:flex;gap:36px;white-space:nowrap;animation:scroll 32s linear infinite;width:max-content;font-weight:600;letter-spacing:.5px}
-.marquee .track span::after{content:"✦";color:var(--gold);margin-left:36px}
-@keyframes scroll{to{transform:translateX(-50%)}}
+/* ---------- career ---------- */
+.role{display:grid;grid-template-columns:220px 1fr;gap:28px;padding:20px 0;border-bottom:1px solid var(--hair)}
+.role .when{font-family:var(--sans);font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+.role .where{font-family:var(--sans);font-size:13px;color:var(--muted);margin-top:4px}
+.role h3{font-size:24px;margin-bottom:2px}
+.role .org{font-style:italic;color:var(--muted);margin-bottom:8px}
+.role ul{padding-left:18px}
+.role li{margin-bottom:6px;font-size:16px}
+.role .tags{font-family:var(--sans);font-size:12.5px;color:var(--muted);margin-top:8px}
 
-/* sections */
-section{padding:100px 0;position:relative}
-.eyebrow{font-family:"Anek Tamil";color:var(--gold);font-weight:700;font-size:18px;letter-spacing:.5px}
-.sec-title{font-size:clamp(34px,5vw,54px);margin:4px 0 14px;color:var(--maroon)}
-.sec-sub{color:var(--muted);max-width:620px;margin-bottom:44px}
-.reveal{opacity:0;transform:translateY(30px);transition:opacity .7s,transform .7s cubic-bezier(.2,.7,.3,1)}
+/* ---------- projects ---------- */
+.desk{margin-top:26px}
+.desk-head{display:flex;align-items:baseline;gap:14px;padding-bottom:6px;margin-bottom:4px;border-bottom:2px solid var(--rule)}
+.desk-head h3{font-size:24px}
+.desk-head span{font-family:var(--sans);font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.story{padding:20px 24px 22px;margin:18px 0;border:1px solid var(--rule);box-shadow:inset 0 0 0 3px var(--paper),inset 0 0 0 4px var(--rule);transition:background 1.2s ease}
+.story>.kicker,.story>.dek{text-align:center;margin-left:auto;margin-right:auto}
+.story.flash{background:var(--flash)}
+.story h2{font-size:clamp(26px,3.2vw,40px);margin-bottom:10px;text-align:center}
+.story .dek{font-size:19px;margin-bottom:10px}
+.story .meta{font-family:var(--sans);font-size:12px;color:var(--muted);padding:6px 0;border-top:1px solid var(--hair);border-bottom:1px solid var(--hair);margin-bottom:16px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.feature{display:grid;grid-template-columns:1.6fr 1fr;gap:30px;align-items:start}
+.story .tail{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:10px;padding-top:10px;border-top:1px dotted var(--hair)}
+.gh{font-family:var(--sans);font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;border-bottom:1px solid var(--ink)}
+.gh:hover{background:var(--ink);color:var(--paper)}
+.gh.off{color:var(--muted);border:none}
+.gh.off:hover{background:none;color:var(--muted)}
+
+/* figures and fact boxes */
+.fig{background:var(--tint);padding:18px 18px 12px;border-top:3px solid var(--rule)}
+.fig h5{font-family:var(--sans);font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px}
+.fig .sub{font-family:var(--sans);font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:12px 0 8px}
+.bar{display:grid;grid-template-columns:112px 1fr 50px;align-items:center;gap:10px;font-family:var(--sans);font-size:12.5px;margin-bottom:9px}
+.bar .track{height:15px;background:#D9D5CB;position:relative;overflow:hidden}
+.bar .fill{position:absolute;inset:0 auto 0 0;width:0;background:var(--bar);transition:width 1.2s cubic-bezier(.2,.7,.2,1)}
+.bar.hi .fill{background:var(--ink)}
+.bar b{text-align:right}
+.facts{list-style:none;font-family:var(--sans);font-size:13.5px;line-height:1.45}
+.facts li{padding:8px 0;border-bottom:1px solid var(--hair);display:grid;grid-template-columns:auto 1fr;gap:10px}
+.facts li:last-child{border-bottom:none}
+.facts b{font-family:var(--display);font-size:20px;font-weight:800;line-height:1.1;min-width:28px}
+.facts .k{display:block;font-weight:700;margin-bottom:1px}
+.flow{list-style:none;counter-reset:s;font-family:var(--sans);font-size:13.5px;line-height:1.45}
+.flow li{counter-increment:s;position:relative;padding:8px 0 8px 34px;border-bottom:1px solid var(--hair)}
+.flow li:last-child{border-bottom:none}
+.flow li::before{content:counter(s);position:absolute;left:0;top:8px;width:22px;height:22px;border:1px solid var(--ink);display:grid;place-items:center;font-weight:700;font-size:12px}
+.flow .k{font-weight:700}
+figcaption{font-family:var(--sans);font-size:12px;color:var(--muted);line-height:1.45;margin-top:8px;padding-top:8px;border-top:1px solid var(--hair)}
+
+/* ---------- research / contact ---------- */
+.last{display:grid;grid-template-columns:1.3fr 1fr 1fr;margin-top:6px}
+.last>section{padding:20px 26px 26px}
+.last>section+section{border-left:1px solid var(--hair)}
+.last>section:first-child{padding-left:0}.last>section:last-child{padding-right:0}
+.sec-head{font-family:var(--display);font-weight:800;font-size:22px;padding-bottom:8px;margin-bottom:14px;border-bottom:1px solid var(--rule)}
+.research{border:1px solid var(--rule);padding:16px 18px}
+.research h3{font-size:21px;margin:4px 0 8px}
+.research p{font-size:15.5px}
+.contact a,.contact button{display:flex;justify-content:space-between;width:100%;padding:9px 0;border:none;border-bottom:1px solid var(--hair);background:none;font-family:var(--sans);font-size:14px;font-weight:600;text-decoration:none;color:var(--ink);cursor:pointer;text-align:left}
+.contact a:hover,.contact button:hover{text-decoration:underline;text-underline-offset:3px}
+.contact .cvbtn{margin-top:14px;justify-content:center;background:var(--ink);color:var(--paper);border:none;padding:12px}
+.contact .cvbtn:hover{background:#3a3a3a;text-decoration:none}
+
+footer{margin-top:40px;padding:14px 0 40px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;color:var(--muted)}
+
+.reveal{opacity:0;transform:translateY(10px);transition:opacity .7s ease,transform .7s ease}
 .reveal.in{opacity:1;transform:none}
 
-/* about */
-.about-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:start}
-.about-text p{margin-bottom:16px}
-.about-text b{color:var(--maroon)}
-.note{position:relative;background:#FFF3C4;color:#3A2A1A;border-radius:4px 18px 18px 18px;padding:22px 22px 18px;margin:8px 0 22px;font-size:17px;
-  box-shadow:0 12px 24px rgba(122,31,43,.14);transform:rotate(-1.2deg);transition:transform .3s;border-left:5px solid var(--gold)}
-.note:hover{transform:rotate(0) scale(1.02)}
-.note b{color:#7A1F2B}
-.note::before{content:"";position:absolute;top:-12px;left:40%;width:70px;height:22px;background:rgba(201,162,39,.45);transform:rotate(-4deg)}
-.note-tag{font-family:"Caveat",cursive;font-size:22px;color:#7A1F2B;font-weight:700;margin-bottom:4px}
-body.night .note{background:#3A2C1C;color:#F3E6C8}
-body.night .note b,body.night .note-tag{color:#F2C46A}
-.stats{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.stat{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px;position:relative;overflow:hidden;box-shadow:var(--shadow)}
-.stat::before{content:"";position:absolute;top:0;left:0;right:0;height:6px;background:linear-gradient(90deg,var(--maroon),var(--gold),var(--peacock))}
-.stat .n{font-family:"Yeseva One";font-size:40px;color:var(--maroon)}
-.stat .l{color:var(--muted);font-size:15px}
-.sidequests{margin-top:20px;font-size:16px;color:var(--muted)}
+/* ---------- red + light-blue accents ---------- */
+.kicker{color:var(--red)}
+.drop::first-letter{color:var(--red)}
+.pull{color:var(--red);border-top-color:var(--red)}
+.runhead .sec b,.index a b{border-color:var(--red);color:var(--red)}
+.runhead{border-bottom:2px solid var(--red)}
+.desk-head{border-bottom-color:var(--red)}
+.desk-head span,.role .when,.inside a span{color:var(--red)}
+.dateline{background:var(--blue-soft)}
+.box-head,.sec-head{border-bottom-color:var(--red)}
+.num b{color:var(--red)}
+.fig{background:var(--blue-soft);border-top-color:var(--blue-ink)}
+.bar .track{background:#F6F3EA}
+.bar .fill{background:var(--blue)}
+.bar.hi .fill{background:var(--red)}
+.flow li::before{border-color:var(--blue-ink);color:var(--blue-ink);background:var(--paper)}
+.facts b{color:var(--blue-ink)}
+.tops article{background:linear-gradient(var(--blue-soft),var(--blue-soft)) top/100% 6px no-repeat}
+.story.flash{background:var(--blue-soft)}
+.research{border-color:var(--blue-ink);background:var(--blue-soft)}
+.box:first-child{background:var(--blue-soft)}
+.gh:hover,.contact .cvbtn:hover,.topbar .cv:hover{background:var(--red);border-color:var(--red);color:#fff}
+.jump{color:var(--red)}
 
-/* projects */
-.filters{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:30px}
-.chip{border:1.5px solid var(--maroon);background:transparent;color:var(--maroon);padding:7px 16px;border-radius:30px;font-weight:600;font-size:15px;transition:.2s}
-.chip.on,.chip:hover{background:var(--maroon);color:#FBF6EC}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:22px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:26px;position:relative;overflow:hidden;cursor:pointer;
-  transition:transform .35s cubic-bezier(.2,.8,.3,1),box-shadow .35s,opacity .3s;box-shadow:var(--shadow)}
-.card::after{content:"";position:absolute;right:-60px;top:-60px;width:160px;height:160px;border-radius:50%;
-  background:radial-gradient(circle,transparent 46%,var(--gold) 47%,var(--gold) 49%,transparent 50%,transparent 62%,var(--line) 63%,var(--line) 66%,transparent 67%);opacity:.6;transition:transform .8s}
-.card:hover{transform:translateY(-8px) rotate(-.4deg);box-shadow:0 22px 50px rgba(122,31,43,.18)}
-.card:hover::after{transform:rotate(180deg) scale(1.2)}
-.card.hide{display:none}
-.card .emo{font-size:34px;width:62px;height:62px;display:grid;place-items:center;border-radius:50%;background:color-mix(in srgb,var(--gold) 22%,transparent);margin-bottom:14px}
-.card h3{font-size:23px;margin-bottom:4px}
-.card .meta{font-size:14px;color:var(--peacock);font-weight:600;margin-bottom:10px}
-.card p{color:var(--muted);font-size:16px;margin-bottom:14px}
-.stack{display:flex;flex-wrap:wrap;gap:6px}
-.stack span{font-size:13px;padding:3px 10px;border-radius:20px;background:color-mix(in srgb,var(--peacock) 12%,transparent);color:var(--peacock);font-weight:600}
-.spice{position:absolute;top:22px;right:22px;font-size:15px;z-index:1}
-.more{display:inline-block;margin-top:14px;font-weight:700;color:var(--maroon);font-size:15px}
+/* ---------- old newsprint texture ---------- */
+body{position:relative;background-color:#F1EADB}
+body::before,body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:0}
+body::before{background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .32  0 0 0 0 .27  0 0 0 0 .2  0 0 0 .55 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>"),url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='900' height='900'><filter id='b'><feTurbulence type='fractalNoise' baseFrequency='.006' numOctaves='4' seed='7'/><feColorMatrix values='0 0 0 0 .55  0 0 0 0 .45  0 0 0 0 .3  0 0 0 1.4 -.55'/></filter><rect width='100%25' height='100%25' filter='url(%23b)'/></svg>");background-size:240px 240px,900px 900px;opacity:.55;mix-blend-mode:multiply}
+body::after{background:radial-gradient(ellipse at center,transparent 55%,rgba(120,92,50,.16) 100%)}
+.page{position:relative;z-index:1}
+body,.cols p,.story li,.role li{text-shadow:0 0 .35px rgba(20,20,20,.45)}
+.fig,.box:first-child,.research,.dateline{background-color:rgba(176,196,204,.32)!important}
 
-dialog{margin:auto;max-height:88vh;border:none;border-radius:24px;max-width:640px;width:92%;padding:0;background:var(--card);color:var(--ink);box-shadow:0 30px 80px rgba(0,0,0,.35)}
-body.night dialog{background:#22181a}
-dialog::backdrop{background:rgba(27,23,20,.55);backdrop-filter:blur(3px)}
-dialog .in{padding:30px}
-dialog h3{font-size:30px;color:var(--maroon);margin:6px 0}
-dialog ul{margin:16px 0 0 20px}
-dialog li{margin-bottom:10px}
-dialog .x{position:absolute;top:28px;right:18px;border:none;background:var(--maroon);color:#fff;width:36px;height:36px;border-radius:50%;font-size:18px}
-dialog[open]{animation:dlg .35s cubic-bezier(.2,.9,.3,1.2)}
-@keyframes dlg{from{opacity:0;transform:translateY(30px) scale(.95)}}
-
-/* gopuram */
-.gopuram-wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end}
-.gopuram{display:flex;flex-direction:column;align-items:center}
-.kalasam{display:flex;gap:10px;margin-bottom:-2px}
-.kalasam svg{width:22px;animation:bob 2.4s ease-in-out infinite}
-.kalasam svg:nth-child(2){animation-delay:.3s;width:28px}.kalasam svg:nth-child(3){animation-delay:.6s}
-@keyframes bob{50%{transform:translateY(-4px)}}
-.tier{border:none;color:#FBF6EC;padding:16px 10px;text-align:center;font-weight:600;font-size:15px;position:relative;
-  clip-path:polygon(7% 0,93% 0,100% 100%,0 100%);transition:filter .25s,transform .25s;margin-top:4px}
-.gopuram.pending .tier,.gopuram.pending .kalasam{opacity:0}
-.tier small{display:block;font-weight:400;opacity:.85;font-size:13px}
-.tier:hover{filter:brightness(1.15);transform:scaleX(1.03)}
-.tier.on{filter:brightness(1.2) drop-shadow(0 0 10px var(--gold))}
-.tier:nth-of-type(odd){background:linear-gradient(var(--maroon),#5a1520)}
-.tier:nth-of-type(even){background:linear-gradient(var(--peacock),#0a4453)}
-.tier::before{content:"";position:absolute;left:8%;right:8%;top:5px;height:5px;background:radial-gradient(circle,var(--gold) 1.6px,transparent 2px) 0 0/9px 5px}
-.detail{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:30px;box-shadow:var(--shadow);min-height:260px;position:relative}
-.detail h3{font-size:28px;color:var(--maroon)}
-.detail .org{color:var(--peacock);font-weight:600;margin:4px 0}
-.detail .when{color:var(--muted);font-size:15px;margin-bottom:12px}
-.detail .swap{animation:fadein .4s}
-@keyframes fadein{from{opacity:0;transform:translateX(12px)}}
-
-/* hobbies */
-.hob-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.hob{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:24px;box-shadow:var(--shadow);display:flex;flex-direction:column}
-.hob h3{font-size:24px;color:var(--maroon)}
-.hob .sub{color:var(--muted);font-size:15px;margin-bottom:14px}
-.beats{display:grid;grid-template-columns:repeat(8,1fr);gap:4px;margin:12px 0}
-.beat{aspect-ratio:1;border-radius:10px;display:grid;place-items:center;font-size:15px;background:color-mix(in srgb,var(--gold) 15%,transparent);border:1px solid var(--line);transition:transform .1s,background .1s}
-.beat.hit{background:var(--maroon);color:#fff;transform:scale(1.15)}
-.ctrl{display:flex;gap:8px;align-items:center;flex-wrap:wrap;font-size:14px}
-.ctrl button{border:1.5px solid var(--maroon);background:var(--maroon);color:#fff;border-radius:20px;padding:6px 14px;font-weight:600}
-.ctrl button.alt{background:transparent;color:var(--maroon)}
-.ctrl input{accent-color:var(--maroon);width:90px}
-#dancer{width:120px;display:block;margin:6px auto 0}
-#dancer .arm{transform-box:view-box;transition:transform .12s}
-#dancer .body{transform-box:view-box;transform-origin:60px 150px;transition:transform .12s}
-.tawa{width:100%;max-width:230px;display:block;margin:0 auto;cursor:grab;touch-action:none}
-#folded{transform-box:view-box;transform-origin:105px 104px}
-#fold:disabled{opacity:.45;cursor:not-allowed}
-.meter{height:12px;border-radius:10px;background:color-mix(in srgb,var(--muted) 18%,transparent);overflow:hidden;margin:10px 0 6px;position:relative}
-.meter i{display:block;height:100%;width:0;background:linear-gradient(90deg,#F4EAD2,#E29E2A 65%,#8C4816 88%,#28140A)}
-.meter::after{content:"";position:absolute;left:60%;width:20%;top:0;bottom:0;border-left:2px dashed var(--leaf);border-right:2px dashed var(--leaf)}
-#fold{width:100%;border:none;background:var(--maroon);color:#fff;padding:11px;border-radius:14px;font-weight:700;margin-top:8px}
-#fold:not(:disabled):active{transform:scale(.97)}
-.msg{min-height:26px;font-weight:600;color:var(--peacock);font-size:15px;text-align:center}
-.journal{background:repeating-linear-gradient(transparent 0 29px,rgba(15,94,115,.18) 29px 30px),#fffdf6;border-radius:6px 16px 16px 6px;
-  border-left:10px solid var(--maroon);padding:14px 16px;font-family:"Caveat",cursive;font-size:23px;line-height:30px;color:#2b2420;min-height:180px;flex:1;
-  box-shadow:inset 6px 0 10px -6px rgba(0,0,0,.25);overflow:auto;max-height:230px}
-.journal .p{color:var(--maroon);font-weight:700}
-.journal .entry{color:#1f4a7a}
-.jrow{display:flex;gap:8px;margin-top:10px}
-.jrow input{flex:1;border:1.5px solid var(--line);background:transparent;color:var(--ink);border-radius:12px;padding:8px 12px;font:inherit;font-size:15px}
-.jrow button,.newprompt{border:none;background:var(--maroon);color:#fff;border-radius:12px;padding:8px 14px;font-weight:600;font-size:14px}
-.newprompt{background:transparent;color:var(--maroon);border:1.5px solid var(--maroon);margin-bottom:10px;align-self:flex-start}
-.tiny{font-size:12px;color:var(--muted);margin-top:6px}
-
-/* contact */
-.contact{text-align:center;background:var(--card);border-radius:30px;padding:60px 30px;border:1px solid var(--line);box-shadow:var(--shadow);position:relative;overflow:hidden}
-.contact h2{font-size:clamp(34px,5vw,56px);color:var(--maroon);margin:6px 0 10px}
-.contact .btns{justify-content:center;margin-top:24px}
-.contact .kolam-bg{position:absolute;width:420px;opacity:.12;right:-120px;bottom:-140px;pointer-events:none}
-footer{text-align:center;color:var(--muted);font-size:14px;padding:26px 20px 34px;position:relative;z-index:1}
-
-/* petals & toast */
-.petal{position:fixed;width:12px;height:12px;pointer-events:none;z-index:60;border-radius:50% 0;background:#fff;box-shadow:0 0 0 1px rgba(201,162,39,.5),inset 0 0 0 3px #fff8e1}
-.bean{position:fixed;top:-30px;font-size:24px;pointer-events:none;z-index:60;animation:fall linear forwards}
-@keyframes fall{to{transform:translateY(110vh) rotate(540deg)}}
-#toast{position:fixed;bottom:24px;left:50%;transform:translate(-50%,120px);background:var(--ink);color:var(--bg);padding:12px 22px;border-radius:30px;z-index:70;transition:transform .4s cubic-bezier(.2,.9,.3,1.3);font-weight:600}
-#toast.show{transform:translate(-50%,0)}
-
-@media (max-width:900px){
-  .hero,.about-grid,.gopuram-wrap{grid-template-columns:1fr}
-  .hob-grid{grid-template-columns:1fr}
-  .links a{display:none}
-  .stage{max-width:400px}
+@media (max-width:980px){
+  .mast{grid-template-columns:1fr}.ear{display:none}
+  .front{grid-template-columns:1fr}.lead{padding-right:0;border-right:none;border-bottom:1px solid var(--hair);padding-bottom:20px;margin-bottom:22px}.side{padding-left:0}
+  .tops,.last{grid-template-columns:1fr}
+  .tops article{margin:14px 0 0!important}.last>section{padding:18px 0!important}.last>section+section{border-left:none;border-top:1px solid var(--hair)}
+  .feature{grid-template-columns:1fr}
+  .role{grid-template-columns:1fr;gap:6px}
 }
-@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+@media (max-width:600px){
+  .page{padding:0 16px}
+  .name{font-size:clamp(40px,13vw,64px);white-space:normal}
+  .cols{column-count:1}
+  .topbar{flex-wrap:wrap;justify-content:center}
+  .dateline{justify-content:center;text-align:center}
+  .index{gap:14px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}}
 </style>
 </head>
 <body>
-<div id="progress"></div>
+<div class="page">
 
-<nav>
-  <div class="wrap">
-    <a href="#top" class="logo">Harshini<span>.</span></a>
-    <div class="links">
-      <a href="#about">About</a><a href="#work">Work</a><a href="#journey">Journey</a><a href="#fun">Fun</a><a href="#contact">Say hi</a><a href="cv/Harshini_BV_CV.pdf" target="_blank" rel="noopener" class="cv-link">CV ↗</a>
-      <button id="lamp" title="Light the lamp (dark mode)" aria-label="Toggle dark mode">
-        <svg width="34" height="44" viewBox="0 0 34 44">
-          <circle class="glow" cx="17" cy="9" r="9" fill="rgba(255,180,60,.35)"/>
-          <path class="flame" d="M17 2 C21 8 21 12 17 15 C13 12 13 8 17 2Z" fill="#FFB534"/>
-          <path d="M8 15 Q17 21 26 15 L24 18 Q17 22 10 18Z" fill="#C9A227"/>
-          <rect x="15.5" y="19" width="3" height="16" fill="#C9A227"/>
-          <circle cx="17" cy="26" r="3" fill="#C9A227"/>
-          <path d="M9 41 Q17 33 25 41Z" fill="#C9A227"/>
-        </svg>
-      </button>
-    </div>
-  </div>
-</nav>
-
-<div class="hero-band">
-<svg id="kolamBig" aria-hidden="true"></svg>
-<header class="wrap hero" id="top">
-  <div>
-    <div class="greet ta">வணக்கம்!</div>
-    <h1>I'm <span class="gold">Harshini</span>.</h1>
-    <div class="typed" id="typed"></div>
-    <p class="lede">MS CS at Arizona State. I build AI stuff (agents, retrieval systems, ML pipelines) and I like it explainable, useful, and a little bit fun.</p>
-    <div class="btns">
-      <a class="btn primary" href="#work">See my work →</a>
-      <a class="btn ghost" href="cv/Harshini_BV_CV.pdf" download>📄 Download CV</a>
-      <a class="btn ghost" href="#fun">The fun stuff ✿</a>
-    </div>
+  <div class="topbar label">
+    <span>Tempe, Arizona</span>
+    <span id="today">&nbsp;</span>
+    <a class="cv" href="cv/Harshini_BV_CV.pdf" target="_blank" rel="noopener">Download CV</a>
   </div>
 
-  <div class="stage">
-    <svg id="kolam" aria-hidden="true"></svg>
-    <div class="bubble" id="bubble">வணக்கம்! 👋</div>
-    <div class="ring" id="ring" title="hover me, click me">
-      <svg viewBox="0 0 320 360" aria-label="Cartoon of Harshini with curly hair, sunglasses and a plum sweater">
-        <defs>
-          <pattern id="rib" width="7" height="10" patternUnits="userSpaceOnUse">
-            <rect width="7" height="10" fill="#5E1F33"/><rect width="2.4" height="10" fill="#4C1729"/>
-          </pattern>
-        </defs>
-        <g class="sway1"><path d="M160 86 C102 86 88 122 86 165 C84 205 64 250 52 300 C48 320 56 334 70 336 L250 336 C264 334 272 320 268 300 C256 250 236 205 234 165 C232 122 218 86 160 86Z" fill="#22160F"/><circle cx="136.8" cy="91.7" r="13.0" fill="#22160F"/><path d="M143.4 90.2A6.7 6.7 0 1 1 130.6 88.9" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="149.6" cy="90.2" r="13.9" fill="#22160F"/><path d="M156.3 92.8A7.2 7.2 0 1 1 145.9 84.0" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="163.0" cy="90.8" r="15.6" fill="#22160F"/><path d="M165.9 98.3A8.1 8.1 0 1 1 165.2 83.0" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="175.3" cy="90.3" r="16.0" fill="#22160F"/><path d="M168.0 94.3A8.3 8.3 0 1 1 183.6 91.6" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="183.1" cy="91.7" r="17.8" fill="#22160F"/><circle cx="197.0" cy="97.8" r="13.7" fill="#22160F"/><path d="M201.4 92.2A7.1 7.1 0 1 1 190.2 99.7" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="112.4" cy="103.0" r="17.7" fill="#22160F"/><circle cx="122.0" cy="105.2" r="13.1" fill="#22160F"/><path d="M128.6 103.6A6.8 6.8 0 1 1 115.8 102.4" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="131.4" cy="108.0" r="13.9" fill="#22160F"/><circle cx="148.0" cy="103.9" r="13.5" fill="#22160F"/><path d="M154.3 106.9A7.0 7.0 0 1 1 144.7 97.7" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="157.3" cy="106.6" r="17.2" fill="#22160F"/><path d="M155.6 115.4A8.9 8.9 0 1 1 164.0 100.7" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="177.2" cy="103.0" r="12.6" fill="#22160F"/><path d="M171.0 105.2A6.5 6.5 0 1 1 183.4 105.1" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="181.6" cy="102.8" r="14.5" fill="#22160F"/><path d="M186.7 108.3A7.6 7.6 0 1 1 181.0 95.2" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="197.6" cy="109.9" r="17.9" fill="#22160F"/><path d="M194.2 101.2A9.3 9.3 0 1 1 195.0 118.8" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="110.9" cy="121.6" r="15.7" fill="#22160F"/><path d="M104.9 127.1A8.1 8.1 0 1 1 119.0 121.0" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="121.8" cy="119.1" r="12.9" fill="#22160F"/><path d="M128.5 118.8A6.7 6.7 0 1 1 116.3 115.2" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="137.8" cy="120.3" r="14.6" fill="#22160F"/><path d="M131.1 116.6A7.6 7.6 0 1 1 140.8 127.3" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="146.4" cy="121.4" r="13.0" fill="#22160F"/><circle cx="155.3" cy="119.0" r="15.1" fill="#22160F"/><path d="M152.8 111.6A7.9 7.9 0 1 1 152.7 126.5" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="173.0" cy="119.1" r="17.6" fill="#22160F"/><path d="M182.1 119.8A9.1 9.1 0 1 1 166.2 113.1" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="184.0" cy="119.8" r="13.6" fill="#22160F"/><path d="M189.9 115.8A7.1 7.1 0 1 1 176.9 119.3" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="200.6" cy="117.4" r="17.4" fill="#22160F"/><path d="M196.0 109.6A9.1 9.1 0 1 1 199.4 126.4" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="209.0" cy="117.3" r="16.9" fill="#22160F"/><circle cx="111.7" cy="125.4" r="16.4" fill="#22160F"/><path d="M108.6 133.4A8.5 8.5 0 1 1 119.0 121.0" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="123.9" cy="125.2" r="13.2" fill="#22160F"/><path d="M130.7 126.3A6.9 6.9 0 1 1 119.2 120.2" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="137.3" cy="127.4" r="13.3" fill="#22160F"/><path d="M132.5 122.4A6.9 6.9 0 1 1 138.0 134.2" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="146.5" cy="131.3" r="16.1" fill="#22160F"/><circle cx="164.6" cy="131.8" r="13.6" fill="#22160F"/><path d="M167.7 138.2A7.1 7.1 0 1 1 166.1 124.9" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="168.1" cy="129.7" r="16.4" fill="#22160F"/><path d="M166.9 138.2A8.5 8.5 0 1 1 174.2 123.8" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="184.5" cy="132.0" r="15.4" fill="#22160F"/><path d="M184.7 124.0A8.0 8.0 0 1 1 179.3 138.1" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="197.9" cy="132.9" r="17.5" fill="#22160F"/><path d="M206.2 129.2A9.1 9.1 0 1 1 189.1 130.8" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="214.2" cy="126.3" r="15.0" fill="#22160F"/><path d="M220.8 122.1A7.8 7.8 0 1 1 206.5 125.6" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="223.8" cy="130.7" r="17.3" fill="#22160F"/><circle cx="95.5" cy="144.7" r="15.2" fill="#22160F"/><path d="M98.4 137.3A7.9 7.9 0 1 1 88.7 148.8" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="103.6" cy="145.0" r="13.5" fill="#22160F"/><path d="M105.3 138.2A7.0 7.0 0 1 1 98.2 149.4" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="117.4" cy="138.5" r="15.3" fill="#22160F"/><path d="M121.7 131.7A8.0 8.0 0 1 1 109.9 141.2" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="135.9" cy="146.5" r="15.2" fill="#22160F"/><circle cx="142.9" cy="139.2" r="15.4" fill="#22160F"/><path d="M141.8 131.3A8.0 8.0 0 1 1 138.9 146.1" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="161.4" cy="142.2" r="17.1" fill="#22160F"/><path d="M158.0 150.5A8.9 8.9 0 1 1 169.1 137.8" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="171.8" cy="145.5" r="17.5" fill="#22160F"/><path d="M177.2 138.1A9.1 9.1 0 1 1 163.1 148.0" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="190.7" cy="142.2" r="15.7" fill="#22160F"/><path d="M182.7 140.4A8.1 8.1 0 1 1 195.9 148.5" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="199.0" cy="143.1" r="12.7" fill="#22160F"/><circle cx="212.2" cy="141.0" r="16.9" fill="#22160F"/><path d="M203.4 141.5A8.8 8.8 0 1 1 219.4 146.0" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="226.9" cy="137.7" r="15.5" fill="#22160F"/><path d="M234.7 135.5A8.0 8.0 0 1 1 219.5 134.6" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="96.2" cy="150.0" r="16.5" fill="#22160F"/><path d="M87.6 149.5A8.6 8.6 0 1 1 102.6 155.7" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="105.5" cy="151.0" r="15.4" fill="#22160F"/><path d="M99.8 156.6A8.0 8.0 0 1 1 113.5 150.0" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="120.1" cy="154.3" r="13.4" fill="#22160F"/><path d="M115.4 149.2A7.0 7.0 0 1 1 120.8 161.2" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="135.4" cy="154.3" r="17.2" fill="#22160F"/><path d="M140.9 147.3A8.9 8.9 0 1 1 126.7 156.5" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="144.3" cy="156.4" r="17.0" fill="#22160F"/><circle cx="158.2" cy="152.1" r="17.6" fill="#22160F"/><path d="M167.3 152.0A9.1 9.1 0 1 1 150.9 146.7" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="176.9" cy="150.3" r="13.8" fill="#22160F"/><path d="M176.5 157.5A7.2 7.2 0 1 1 181.6 144.9" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="182.0" cy="157.3" r="14.8" fill="#22160F"/><circle cx="195.3" cy="153.0" r="16.3" fill="#22160F"/><path d="M197.8 161.1A8.5 8.5 0 1 1 198.2 145.1" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="213.8" cy="158.1" r="17.8" fill="#22160F"/><path d="M204.6 157.8A9.3 9.3 0 1 1 221.0 164.0" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="227.6" cy="154.0" r="16.3" fill="#22160F"/><path d="M235.2 157.7A8.5 8.5 0 1 1 223.8 146.5" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="82.2" cy="165.3" r="15.8" fill="#22160F"/><path d="M79.6 157.5A8.2 8.2 0 1 1 79.3 173.0" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="98.4" cy="162.8" r="15.0" fill="#22160F"/><path d="M92.0 167.2A7.8 7.8 0 1 1 106.2 163.3" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="105.0" cy="162.7" r="15.3" fill="#22160F"/><path d="M111.2 157.7A8.0 8.0 0 1 1 97.0 162.8" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="124.0" cy="168.0" r="17.2" fill="#22160F"/><path d="M116.6 173.1A9.0 9.0 0 1 1 133.0 168.6" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="135.0" cy="166.0" r="17.9" fill="#22160F"/><circle cx="144.6" cy="170.1" r="16.6" fill="#22160F"/><circle cx="163.1" cy="165.1" r="17.4" fill="#22160F"/><circle cx="174.9" cy="168.7" r="16.7" fill="#22160F"/><path d="M173.4 160.1A8.7 8.7 0 1 1 170.9 176.4" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="181.7" cy="164.4" r="15.1" fill="#22160F"/><path d="M176.9 170.6A7.8 7.8 0 1 1 189.3 162.5" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="200.4" cy="167.2" r="13.8" fill="#22160F"/><circle cx="213.7" cy="164.4" r="16.1" fill="#22160F"/><path d="M205.5 162.7A8.4 8.4 0 1 1 219.1 170.8" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="223.9" cy="171.0" r="16.0" fill="#22160F"/><path d="M224.5 162.7A8.3 8.3 0 1 1 218.3 177.2" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="85.1" cy="173.8" r="15.8" fill="#22160F"/><circle cx="90.5" cy="182.3" r="13.4" fill="#22160F"/><path d="M93.8 188.4A7.0 7.0 0 1 1 91.5 175.4" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="108.0" cy="179.1" r="12.8" fill="#22160F"/><circle cx="120.2" cy="178.3" r="15.8" fill="#22160F"/><path d="M118.4 186.3A8.2 8.2 0 1 1 126.5 173.1" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="135.6" cy="178.6" r="14.1" fill="#22160F"/><path d="M133.5 185.6A7.3 7.3 0 1 1 141.5 174.3" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="142.1" cy="175.5" r="12.7" fill="#22160F"/><path d="M142.3 168.8A6.6 6.6 0 1 1 137.9 180.6" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="158.9" cy="182.0" r="16.6" fill="#22160F"/><path d="M167.5 181.3A8.6 8.6 0 1 1 151.7 177.2" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="177.4" cy="173.7" r="17.5" fill="#22160F"/><path d="M168.4 175.0A9.1 9.1 0 1 1 185.4 178.2" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="190.7" cy="175.4" r="15.4" fill="#22160F"/><circle cx="201.2" cy="177.7" r="17.9" fill="#22160F"/><circle cx="213.0" cy="174.2" r="15.9" fill="#22160F"/><path d="M215.4 182.1A8.3 8.3 0 1 1 216.0 166.4" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="220.5" cy="178.3" r="13.2" fill="#22160F"/><path d="M217.1 172.3A6.9 6.9 0 1 1 219.6 185.1" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="237.6" cy="175.6" r="15.7" fill="#22160F"/><path d="M239.0 167.6A8.2 8.2 0 1 1 231.5 181.1" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="99.8" cy="194.2" r="17.3" fill="#22160F"/><path d="M108.2 197.5A9.0 9.0 0 1 1 95.2 186.4" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="105.7" cy="189.3" r="15.9" fill="#22160F"/><path d="M97.7 187.1A8.3 8.3 0 1 1 110.7 195.8" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="116.7" cy="185.9" r="16.2" fill="#22160F"/><path d="M111.0 179.7A8.4 8.4 0 1 1 117.5 194.3" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="132.7" cy="189.8" r="13.7" fill="#22160F"/><path d="M132.5 182.7A7.1 7.1 0 1 1 128.6 195.6" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="150.4" cy="185.7" r="13.2" fill="#22160F"/><circle cx="161.2" cy="192.7" r="13.7" fill="#22160F"/><path d="M160.9 199.8A7.1 7.1 0 1 1 165.9 187.3" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="176.1" cy="188.7" r="16.1" fill="#22160F"/><circle cx="184.3" cy="190.5" r="16.6" fill="#22160F"/><circle cx="198.3" cy="188.7" r="13.0" fill="#22160F"/><circle cx="207.8" cy="185.8" r="15.6" fill="#22160F"/><path d="M204.6 178.4A8.1 8.1 0 1 1 205.8 193.7" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="223.0" cy="192.8" r="12.9" fill="#22160F"/><path d="M219.5 187.0A6.7 6.7 0 1 1 222.3 199.4" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="233.8" cy="188.0" r="16.5" fill="#22160F"/><path d="M232.1 196.4A8.6 8.6 0 1 1 240.3 182.5" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="85.9" cy="199.5" r="14.5" fill="#22160F"/><path d="M81.0 205.2A7.5 7.5 0 1 1 93.3 198.0" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="94.0" cy="200.9" r="13.6" fill="#22160F"/><path d="M96.0 194.1A7.1 7.1 0 1 1 88.2 205.0" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="108.4" cy="205.4" r="15.6" fill="#22160F"/><path d="M108.8 197.3A8.1 8.1 0 1 1 103.1 211.5" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="124.8" cy="199.8" r="12.6" fill="#22160F"/><path d="M118.5 198.0A6.6 6.6 0 1 1 128.7 205.1" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="134.7" cy="206.7" r="16.1" fill="#22160F"/><circle cx="142.6" cy="202.5" r="16.8" fill="#22160F"/><path d="M150.3 206.8A8.8 8.8 0 1 1 139.2 194.4" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="162.4" cy="206.0" r="13.0" fill="#22160F"/><path d="M166.5 211.3A6.7 6.7 0 1 1 162.3 199.2" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="175.5" cy="203.5" r="13.8" fill="#22160F"/><path d="M176.1 196.3A7.2 7.2 0 1 1 170.5 208.7" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="186.2" cy="204.6" r="14.7" fill="#22160F"/><path d="M193.7 203.1A7.6 7.6 0 1 1 179.4 201.3" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="200.7" cy="201.9" r="15.5" fill="#22160F"/><path d="M198.6 194.2A8.0 8.0 0 1 1 197.6 209.4" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="216.1" cy="201.1" r="17.0" fill="#22160F"/><path d="M221.5 194.0A8.9 8.9 0 1 1 207.6 203.4" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="228.1" cy="205.3" r="17.4" fill="#22160F"/><circle cx="239.4" cy="202.2" r="16.4" fill="#22160F"/><circle cx="70.5" cy="216.8" r="13.5" fill="#22160F"/><path d="M63.7 218.6A7.0 7.0 0 1 1 76.9 219.5" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="82.8" cy="218.1" r="12.7" fill="#22160F"/><path d="M85.5 224.1A6.6 6.6 0 1 1 84.5 211.7" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="92.2" cy="211.4" r="16.4" fill="#22160F"/><path d="M93.6 219.8A8.6 8.6 0 1 1 96.2 203.8" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="104.8" cy="211.8" r="13.4" fill="#22160F"/><circle cx="119.1" cy="214.5" r="17.0" fill="#22160F"/><path d="M118.5 223.3A8.8 8.8 0 1 1 125.0 207.9" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="137.9" cy="218.1" r="14.4" fill="#22160F"/><path d="M145.1 216.1A7.5 7.5 0 1 1 130.9 215.3" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="146.8" cy="211.2" r="12.8" fill="#22160F"/><circle cx="163.0" cy="212.8" r="15.4" fill="#22160F"/><path d="M161.8 220.8A8.0 8.0 0 1 1 168.8 207.3" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="177.9" cy="215.6" r="13.8" fill="#22160F"/><path d="M170.8 216.8A7.2 7.2 0 1 1 184.3 218.9" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="184.7" cy="217.0" r="16.4" fill="#22160F"/><path d="M189.4 224.1A8.5 8.5 0 1 1 185.4 208.5" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="195.6" cy="212.2" r="13.9" fill="#22160F"/><circle cx="212.2" cy="215.4" r="18.0" fill="#22160F"/><path d="M203.0 213.4A9.3 9.3 0 1 1 218.2 222.5" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="221.5" cy="216.7" r="12.5" fill="#22160F"/><circle cx="241.5" cy="217.2" r="13.0" fill="#22160F"/><path d="M240.0 210.6A6.7 6.7 0 1 1 238.6 223.3" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="247.0" cy="213.8" r="15.1" fill="#22160F"/><circle cx="72.3" cy="224.1" r="14.2" fill="#22160F"/><path d="M69.8 231.1A7.4 7.4 0 1 1 78.6 220.2" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="81.7" cy="228.2" r="14.5" fill="#22160F"/><path d="M87.6 232.8A7.5 7.5 0 1 1 79.8 220.9" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="93.9" cy="225.6" r="17.8" fill="#22160F"/><circle cx="109.5" cy="221.1" r="14.6" fill="#22160F"/><path d="M110.1 228.7A7.6 7.6 0 1 1 113.7 214.8" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="121.6" cy="225.6" r="12.6" fill="#22160F"/><circle cx="137.0" cy="223.1" r="15.9" fill="#22160F"/><path d="M131.1 228.9A8.3 8.3 0 1 1 145.2 222.1" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="147.4" cy="224.0" r="14.4" fill="#22160F"/><path d="M143.7 217.5A7.5 7.5 0 1 1 146.4 231.4" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="157.6" cy="223.0" r="16.5" fill="#22160F"/><path d="M165.6 220.1A8.6 8.6 0 1 1 149.4 220.4" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="173.6" cy="228.2" r="14.3" fill="#22160F"/><circle cx="181.9" cy="222.4" r="13.0" fill="#22160F"/><path d="M180.2 215.9A6.8 6.8 0 1 1 179.3 228.7" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="195.8" cy="225.0" r="17.1" fill="#22160F"/><path d="M203.3 229.8A8.9 8.9 0 1 1 192.8 216.7" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="209.3" cy="222.6" r="13.2" fill="#22160F"/><path d="M215.4 225.6A6.9 6.9 0 1 1 206.2 216.4" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="229.2" cy="225.3" r="15.3" fill="#22160F"/><path d="M230.0 217.3A8.0 8.0 0 1 1 223.7 231.0" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="241.2" cy="224.9" r="14.3" fill="#22160F"/><path d="M248.6 225.6A7.4 7.4 0 1 1 235.8 219.8" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="250.0" cy="228.0" r="17.9" fill="#22160F"/><circle cx="65.6" cy="240.7" r="17.5" fill="#22160F"/><path d="M60.1 247.9A9.1 9.1 0 1 1 74.3 238.3" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="82.0" cy="234.4" r="16.4" fill="#22160F"/><circle cx="95.2" cy="240.2" r="17.1" fill="#22160F"/><path d="M103.5 237.1A8.9 8.9 0 1 1 86.7 237.4" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="109.3" cy="235.0" r="13.0" fill="#22160F"/><path d="M103.3 231.9A6.7 6.7 0 1 1 112.1 241.1" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="123.0" cy="236.3" r="17.6" fill="#22160F"/><path d="M114.1 238.4A9.2 9.2 0 1 1 131.3 240.1" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="130.2" cy="242.7" r="13.2" fill="#22160F"/><circle cx="147.4" cy="238.6" r="15.6" fill="#22160F"/><path d="M154.2 234.2A8.1 8.1 0 1 1 139.4 237.9" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="164.9" cy="241.2" r="15.8" fill="#22160F"/><path d="M168.6 233.8A8.2 8.2 0 1 1 157.5 244.7" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="170.9" cy="242.0" r="13.8" fill="#22160F"/><path d="M174.4 235.7A7.2 7.2 0 1 1 164.3 244.8" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="182.9" cy="238.5" r="12.9" fill="#22160F"/><path d="M185.7 244.6A6.7 6.7 0 1 1 184.3 231.9" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="203.9" cy="242.4" r="16.1" fill="#22160F"/><path d="M199.9 235.0A8.4 8.4 0 1 1 202.5 250.7" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="214.4" cy="236.8" r="15.8" fill="#22160F"/><circle cx="220.2" cy="235.0" r="15.1" fill="#22160F"/><path d="M214.2 240.1A7.8 7.8 0 1 1 228.0 234.6" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="238.7" cy="234.7" r="15.4" fill="#22160F"/><path d="M231.4 231.4A8.0 8.0 0 1 1 242.4 241.8" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="249.3" cy="239.4" r="12.7" fill="#22160F"/><path d="M253.4 244.6A6.6 6.6 0 1 1 249.3 232.8" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="68.1" cy="249.3" r="15.6" fill="#22160F"/><circle cx="82.3" cy="250.3" r="14.9" fill="#22160F"/><circle cx="93.2" cy="245.5" r="16.5" fill="#22160F"/><circle cx="110.3" cy="251.0" r="16.6" fill="#22160F"/><path d="M103.1 246.2A8.7 8.7 0 1 1 113.1 259.2" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="116.7" cy="246.2" r="15.0" fill="#22160F"/><path d="M110.5 251.0A7.8 7.8 0 1 1 124.5 246.3" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="129.5" cy="251.9" r="15.4" fill="#22160F"/><path d="M126.8 259.5A8.0 8.0 0 1 1 136.3 247.7" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="146.0" cy="247.4" r="12.9" fill="#22160F"/><circle cx="164.7" cy="251.7" r="17.3" fill="#22160F"/><path d="M167.7 243.2A9.0 9.0 0 1 1 157.1 256.5" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="170.2" cy="252.5" r="15.6" fill="#22160F"/><circle cx="182.0" cy="252.9" r="13.2" fill="#22160F"/><path d="M188.5 250.8A6.9 6.9 0 1 1 175.5 250.6" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="194.0" cy="247.4" r="14.1" fill="#22160F"/><path d="M200.8 250.3A7.4 7.4 0 1 1 190.4 241.1" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="216.0" cy="253.2" r="14.7" fill="#22160F"/><path d="M209.4 249.3A7.6 7.6 0 1 1 218.8 260.3" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="220.5" cy="245.3" r="17.4" fill="#22160F"/><path d="M211.4 245.4A9.1 9.1 0 1 1 227.7 250.8" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="242.3" cy="254.8" r="15.1" fill="#22160F"/><path d="M240.1 262.3A7.9 7.9 0 1 1 248.7 250.2" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="255.2" cy="254.0" r="13.6" fill="#22160F"/><circle cx="67.1" cy="266.0" r="17.3" fill="#22160F"/><path d="M73.1 272.7A9.0 9.0 0 1 1 66.5 257.0" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="84.0" cy="266.4" r="14.9" fill="#22160F"/><path d="M85.3 274.0A7.8 7.8 0 1 1 87.6 259.5" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="93.1" cy="264.1" r="13.6" fill="#22160F"/><path d="M93.7 271.1A7.1 7.1 0 1 1 96.9 258.1" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="109.6" cy="264.9" r="14.5" fill="#22160F"/><path d="M115.3 259.9A7.6 7.6 0 1 1 102.1 265.4" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="121.9" cy="259.3" r="14.2" fill="#22160F"/><circle cx="135.7" cy="259.8" r="16.0" fill="#22160F"/><path d="M144.0 258.9A8.3 8.3 0 1 1 128.6 255.4" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="146.4" cy="262.3" r="15.4" fill="#22160F"/><path d="M139.9 257.6A8.0 8.0 0 1 1 148.7 270.0" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="157.8" cy="259.5" r="16.9" fill="#22160F"/><path d="M155.9 268.1A8.8 8.8 0 1 1 164.6 253.9" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="175.6" cy="259.5" r="14.0" fill="#22160F"/><path d="M178.4 266.2A7.3 7.3 0 1 1 177.4 252.4" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="190.0" cy="266.9" r="12.7" fill="#22160F"/><path d="M190.0 260.3A6.6 6.6 0 1 1 185.9 272.1" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="197.8" cy="266.3" r="15.2" fill="#22160F"/><path d="M190.4 263.6A7.9 7.9 0 1 1 202.1 273.0" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="213.4" cy="260.6" r="16.1" fill="#22160F"/><circle cx="225.2" cy="262.1" r="17.1" fill="#22160F"/><path d="M216.3 260.9A8.9 8.9 0 1 1 231.5 268.4" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="242.5" cy="258.7" r="16.8" fill="#22160F"/><path d="M235.7 253.3A8.7 8.7 0 1 1 244.6 267.2" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="248.4" cy="261.4" r="16.8" fill="#22160F"/><circle cx="59.7" cy="270.8" r="13.3" fill="#22160F"/><path d="M52.8 271.0A6.9 6.9 0 1 1 65.3 274.9" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="68.3" cy="273.4" r="13.9" fill="#22160F"/><circle cx="77.7" cy="278.1" r="15.6" fill="#22160F"/><path d="M79.8 270.2A8.1 8.1 0 1 1 71.3 283.0" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="92.4" cy="270.5" r="14.2" fill="#22160F"/><path d="M89.5 277.3A7.4 7.4 0 1 1 98.8 266.9" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="109.2" cy="274.3" r="14.0" fill="#22160F"/><path d="M115.4 278.1A7.3 7.3 0 1 1 106.7 267.5" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="124.2" cy="270.7" r="13.9" fill="#22160F"/><path d="M121.6 264.0A7.2 7.2 0 1 1 122.2 277.7" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="137.3" cy="276.9" r="12.8" fill="#22160F"/><path d="M132.9 281.9A6.7 6.7 0 1 1 143.9 275.6" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="144.2" cy="278.7" r="12.7" fill="#22160F"/><path d="M144.6 272.1A6.6 6.6 0 1 1 139.8 283.7" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="164.9" cy="270.4" r="15.0" fill="#22160F"/><path d="M172.4 272.3A7.8 7.8 0 1 1 160.0 264.3" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="170.4" cy="277.9" r="13.3" fill="#22160F"/><path d="M168.4 284.5A6.9 6.9 0 1 1 176.1 273.9" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="185.2" cy="269.8" r="12.7" fill="#22160F"/><circle cx="201.6" cy="276.3" r="13.8" fill="#22160F"/><path d="M194.8 274.1A7.2 7.2 0 1 1 205.6 282.3" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="209.4" cy="273.6" r="17.6" fill="#22160F"/><path d="M204.7 281.5A9.2 9.2 0 1 1 218.0 270.3" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="229.8" cy="275.1" r="12.7" fill="#22160F"/><path d="M225.9 269.8A6.6 6.6 0 1 1 229.6 281.7" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="233.6" cy="272.4" r="16.3" fill="#22160F"/><circle cx="251.9" cy="277.9" r="15.0" fill="#22160F"/><path d="M256.2 271.3A7.8 7.8 0 1 1 244.5 280.4" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="262.8" cy="276.8" r="13.7" fill="#22160F"/><path d="M265.7 283.3A7.1 7.1 0 1 1 264.5 269.9" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="42.5" cy="290.9" r="16.2" fill="#22160F"/><circle cx="53.0" cy="284.8" r="12.9" fill="#22160F"/><path d="M48.7 289.9A6.7 6.7 0 1 1 59.6 283.5" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="66.7" cy="281.2" r="13.5" fill="#22160F"/><path d="M61.3 285.6A7.0 7.0 0 1 1 73.8 281.1" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="86.2" cy="288.2" r="14.0" fill="#22160F"/><path d="M90.4 294.1A7.3 7.3 0 1 1 86.6 280.9" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="99.4" cy="284.6" r="16.7" fill="#22160F"/><path d="M106.6 279.8A8.7 8.7 0 1 1 90.7 284.0" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="103.2" cy="284.2" r="14.6" fill="#22160F"/><path d="M108.8 279.1A7.6 7.6 0 1 1 95.6 284.9" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="119.3" cy="288.7" r="15.4" fill="#22160F"/><path d="M113.0 293.6A8.0 8.0 0 1 1 127.2 288.6" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="131.4" cy="281.4" r="13.3" fill="#22160F"/><path d="M138.2 282.8A6.9 6.9 0 1 1 126.8 276.2" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="145.1" cy="285.2" r="15.5" fill="#22160F"/><path d="M142.9 277.5A8.1 8.1 0 1 1 142.1 292.7" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="157.6" cy="288.3" r="16.2" fill="#22160F"/><path d="M160.0 296.3A8.4 8.4 0 1 1 160.7 280.4" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="170.8" cy="288.1" r="14.7" fill="#22160F"/><path d="M175.9 282.4A7.7 7.7 0 1 1 163.3 289.5" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="183.3" cy="283.9" r="14.4" fill="#22160F"/><path d="M190.5 285.8A7.5 7.5 0 1 1 178.7 278.0" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="194.2" cy="287.3" r="15.6" fill="#22160F"/><circle cx="216.8" cy="284.0" r="16.2" fill="#22160F"/><circle cx="222.2" cy="287.9" r="16.2" fill="#22160F"/><circle cx="241.7" cy="283.3" r="16.0" fill="#22160F"/><path d="M234.2 287.0A8.3 8.3 0 1 1 249.8 285.0" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="249.9" cy="281.6" r="14.6" fill="#22160F"/><path d="M242.3 281.8A7.6 7.6 0 1 1 256.0 286.1" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="261.8" cy="282.6" r="14.7" fill="#22160F"/><path d="M265.6 289.2A7.7 7.7 0 1 1 262.8 275.0" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="43.8" cy="300.0" r="15.5" fill="#22160F"/><path d="M51.8 301.2A8.1 8.1 0 1 1 38.2 294.2" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="54.9" cy="296.6" r="12.8" fill="#22160F"/><path d="M61.2 298.9A6.7 6.7 0 1 1 51.3 291.0" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="69.0" cy="298.9" r="15.1" fill="#22160F"/><path d="M68.8 306.7A7.8 7.8 0 1 1 73.9 292.8" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="77.2" cy="296.5" r="17.4" fill="#22160F"/><path d="M76.6 305.5A9.1 9.1 0 1 1 83.3 289.7" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="96.7" cy="294.9" r="15.1" fill="#22160F"/><path d="M104.2 292.6A7.8 7.8 0 1 1 89.4 292.0" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="106.6" cy="298.8" r="17.7" fill="#22160F"/><circle cx="122.3" cy="299.2" r="14.8" fill="#22160F"/><path d="M121.0 306.8A7.7 7.7 0 1 1 127.9 294.0" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="137.3" cy="301.8" r="14.6" fill="#22160F"/><circle cx="142.4" cy="294.4" r="15.3" fill="#22160F"/><path d="M137.3 300.5A8.0 8.0 0 1 1 150.1 292.6" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="164.8" cy="294.5" r="13.6" fill="#22160F"/><path d="M161.8 288.1A7.1 7.1 0 1 1 163.2 301.4" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="170.3" cy="293.0" r="15.5" fill="#22160F"/><path d="M170.9 301.0A8.1 8.1 0 1 1 174.8 286.3" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="185.9" cy="299.5" r="15.5" fill="#22160F"/><path d="M178.4 296.5A8.1 8.1 0 1 1 190.0 306.5" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="202.3" cy="302.7" r="14.3" fill="#22160F"/><path d="M207.9 297.8A7.5 7.5 0 1 1 194.9 303.1" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="210.1" cy="300.2" r="16.3" fill="#22160F"/><path d="M218.4 298.2A8.5 8.5 0 1 1 202.4 296.6" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="228.2" cy="294.6" r="15.9" fill="#22160F"/><path d="M220.6 291.4A8.3 8.3 0 1 1 232.3 301.8" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="236.7" cy="295.9" r="16.6" fill="#22160F"/><path d="M237.4 304.5A8.6 8.6 0 1 1 241.4 288.6" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="248.5" cy="296.2" r="13.5" fill="#22160F"/><path d="M253.4 301.2A7.0 7.0 0 1 1 247.6 289.3" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="259.6" cy="293.7" r="13.1" fill="#22160F"/><path d="M264.8 298.1A6.8 6.8 0 1 1 258.3 287.0" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="276.5" cy="300.7" r="15.1" fill="#22160F"/><path d="M281.8 294.8A7.9 7.9 0 1 1 268.8 302.2" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="46.0" cy="308.9" r="16.4" fill="#22160F"/><path d="M44.1 300.6A8.5 8.5 0 1 1 42.3 316.7" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="54.3" cy="308.3" r="16.7" fill="#22160F"/><circle cx="72.3" cy="310.7" r="14.8" fill="#22160F"/><path d="M66.8 305.3A7.7 7.7 0 1 1 73.4 318.3" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="85.3" cy="313.0" r="13.2" fill="#22160F"/><path d="M82.0 307.0A6.9 6.9 0 1 1 84.3 319.8" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="92.3" cy="306.8" r="12.6" fill="#22160F"/><path d="M98.4 304.5A6.5 6.5 0 1 1 86.0 305.0" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="112.7" cy="306.3" r="16.3" fill="#22160F"/><path d="M107.0 300.1A8.5 8.5 0 1 1 113.5 314.8" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="120.0" cy="314.3" r="17.9" fill="#22160F"/><path d="M117.8 305.3A9.3 9.3 0 1 1 116.1 322.8" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="130.2" cy="305.4" r="14.1" fill="#22160F"/><path d="M137.5 305.1A7.3 7.3 0 1 1 124.2 301.2" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="143.2" cy="308.3" r="12.6" fill="#22160F"/><path d="M136.7 309.0A6.6 6.6 0 1 1 148.8 311.7" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="158.7" cy="308.1" r="16.9" fill="#22160F"/><circle cx="170.8" cy="308.9" r="15.9" fill="#22160F"/><circle cx="190.8" cy="308.9" r="16.3" fill="#22160F"/><path d="M193.4 300.8A8.5 8.5 0 1 1 183.8 313.7" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="195.5" cy="306.8" r="13.1" fill="#22160F"/><circle cx="209.5" cy="309.9" r="13.2" fill="#22160F"/><path d="M216.3 310.7A6.8 6.8 0 1 1 204.6 305.1" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="225.7" cy="306.4" r="15.9" fill="#22160F"/><path d="M226.8 314.6A8.3 8.3 0 1 1 229.8 299.2" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="237.8" cy="308.7" r="13.9" fill="#22160F"/><path d="M244.5 311.5A7.2 7.2 0 1 1 234.3 302.3" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="254.9" cy="308.1" r="12.9" fill="#22160F"/><path d="M248.2 308.8A6.7 6.7 0 1 1 260.6 311.6" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="269.0" cy="307.0" r="17.3" fill="#22160F"/><path d="M261.3 311.6A9.0 9.0 0 1 1 277.9 308.1" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="280.1" cy="309.0" r="12.8" fill="#22160F"/><path d="M276.4 303.4A6.7 6.7 0 1 1 279.6 315.6" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="47.9" cy="321.4" r="17.1" fill="#22160F"/><path d="M51.9 329.4A8.9 8.9 0 1 1 49.6 312.7" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="51.3" cy="318.7" r="13.2" fill="#22160F"/><path d="M46.9 324.0A6.8 6.8 0 1 1 57.9 317.1" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="71.5" cy="320.1" r="15.3" fill="#22160F"/><path d="M73.5 327.8A8.0 8.0 0 1 1 74.7 312.8" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="86.6" cy="317.1" r="15.4" fill="#22160F"/><circle cx="138.9" cy="318.0" r="17.7" fill="#22160F"/><path d="M136.3 309.2A9.2 9.2 0 1 1 135.5 326.6" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="144.5" cy="326.1" r="12.6" fill="#22160F"/><path d="M145.4 332.6A6.6 6.6 0 1 1 147.7 320.4" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="158.9" cy="320.7" r="16.1" fill="#22160F"/><circle cx="184.5" cy="319.8" r="17.5" fill="#22160F"/><path d="M192.1 324.9A9.1 9.1 0 1 1 181.7 311.2" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="209.1" cy="324.4" r="15.5" fill="#22160F"/><path d="M212.7 331.7A8.1 8.1 0 1 1 210.7 316.5" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="221.1" cy="318.4" r="14.4" fill="#22160F"/><path d="M228.5 318.9A7.5 7.5 0 1 1 215.4 313.5" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="238.0" cy="321.0" r="14.3" fill="#22160F"/><path d="M245.1 318.8A7.4 7.4 0 1 1 231.1 318.5" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/></g>
-        <g transform="translate(0,-14)">
-          <path d="M40 376 C46 304 96 282 160 280 C224 282 274 304 280 376 Z" fill="url(#rib)"/>
-          <path d="M140 212 L140 254 Q160 270 180 254 L180 212 Z" fill="#D9A27E"/>
-          <path d="M98 294 C116 276 138 270 160 270 C182 270 204 276 222 294 C214 314 188 322 160 322 C132 322 106 314 98 294 Z" fill="#6E2741"/>
-          <path d="M110 298 C134 313 186 313 210 298" stroke="#4C1729" stroke-width="3" fill="none"/>
-        </g>
-        <g class="sway2"><circle cx="90.5" cy="207.9" r="11.9" fill="#22160F"/><path d="M85.3 211.3A6.2 6.2 0 1 1 96.7 208.4" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="81.8" cy="207.0" r="12.2" fill="#22160F"/><circle cx="66.7" cy="206.1" r="14.3" fill="#22160F"/><path d="M64.6 199.0A7.4 7.4 0 1 1 64.1 213.0" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="91.0" cy="217.6" r="11.6" fill="#22160F"/><circle cx="77.6" cy="219.8" r="13.2" fill="#22160F"/><path d="M83.9 217.0A6.9 6.9 0 1 1 71.0 218.2" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="63.8" cy="217.8" r="12.3" fill="#22160F"/><path d="M58.2 220.9A6.4 6.4 0 1 1 70.1 218.8" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="87.6" cy="227.5" r="14.3" fill="#22160F"/><path d="M85.0 220.5A7.4 7.4 0 1 1 85.3 234.6" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="71.5" cy="226.0" r="12.1" fill="#22160F"/><path d="M76.5 222.1A6.3 6.3 0 1 1 65.1 226.0" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="61.8" cy="226.7" r="13.8" fill="#22160F"/><circle cx="82.0" cy="239.4" r="10.9" fill="#22160F"/><circle cx="73.1" cy="237.9" r="12.0" fill="#22160F"/><path d="M70.0 232.5A6.2 6.2 0 1 1 72.1 244.1" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="58.0" cy="242.6" r="10.6" fill="#22160F"/><path d="M52.6 243.7A5.5 5.5 0 1 1 62.9 245.1" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="80.8" cy="249.7" r="11.8" fill="#22160F"/><path d="M76.0 246.0A6.1 6.1 0 1 1 82.3 255.6" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="62.9" cy="253.8" r="14.5" fill="#22160F"/><path d="M66.5 247.2A7.5 7.5 0 1 1 56.0 256.9" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="52.5" cy="254.0" r="10.8" fill="#22160F"/><path d="M47.9 257.2A5.6 5.6 0 1 1 58.1 254.2" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="75.4" cy="258.7" r="14.5" fill="#22160F"/><path d="M70.2 264.2A7.5 7.5 0 1 1 82.8 257.5" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="66.5" cy="260.2" r="13.5" fill="#22160F"/><path d="M70.0 266.2A7.0 7.0 0 1 1 67.4 253.2" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="49.4" cy="262.9" r="11.5" fill="#22160F"/><circle cx="71.7" cy="274.2" r="11.0" fill="#22160F"/><path d="M77.4 274.8A5.7 5.7 0 1 1 67.5 270.3" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="57.6" cy="275.6" r="14.1" fill="#22160F"/><path d="M53.3 281.5A7.3 7.3 0 1 1 64.7 273.5" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="47.2" cy="268.9" r="13.7" fill="#22160F"/><path d="M40.1 268.6A7.1 7.1 0 1 1 52.7 273.5" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="73.4" cy="283.5" r="11.0" fill="#22160F"/><path d="M67.7 283.1A5.7 5.7 0 1 1 77.7 287.4" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="59.1" cy="285.2" r="11.5" fill="#22160F"/><path d="M64.7 287.2A6.0 6.0 0 1 1 55.9 280.2" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="46.7" cy="283.5" r="12.3" fill="#22160F"/><circle cx="70.5" cy="296.8" r="11.1" fill="#22160F"/><circle cx="54.2" cy="293.3" r="12.9" fill="#22160F"/><circle cx="37.6" cy="290.1" r="11.1" fill="#22160F"/><circle cx="62.4" cy="306.7" r="11.1" fill="#22160F"/><path d="M68.1 307.7A5.8 5.8 0 1 1 58.5 302.4" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="54.4" cy="303.4" r="14.4" fill="#22160F"/><path d="M58.7 297.3A7.5 7.5 0 1 1 47.3 305.6" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="41.9" cy="301.6" r="11.5" fill="#22160F"/><path d="M47.1 298.7A6.0 6.0 0 1 1 36.0 300.8" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="62.6" cy="315.9" r="13.1" fill="#22160F"/><circle cx="44.6" cy="316.5" r="12.5" fill="#22160F"/><circle cx="226.1" cy="204.9" r="12.2" fill="#22160F"/><path d="M222.1 209.9A6.4 6.4 0 1 1 232.2 203.5" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="240.4" cy="205.6" r="10.7" fill="#22160F"/><circle cx="250.5" cy="206.4" r="12.1" fill="#22160F"/><path d="M255.6 210.1A6.3 6.3 0 1 1 248.7 200.4" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="230.1" cy="215.5" r="12.4" fill="#22160F"/><path d="M230.0 209.0A6.5 6.5 0 1 1 226.1 220.7" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="244.0" cy="213.1" r="12.1" fill="#22160F"/><circle cx="253.1" cy="220.7" r="12.0" fill="#22160F"/><path d="M248.9 225.3A6.2 6.2 0 1 1 259.3 219.7" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="232.6" cy="228.9" r="12.9" fill="#22160F"/><path d="M225.9 229.0A6.7 6.7 0 1 1 237.9 232.9" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="247.3" cy="230.0" r="10.7" fill="#22160F"/><path d="M247.2 235.6A5.6 5.6 0 1 1 250.7 225.7" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="258.3" cy="227.4" r="13.9" fill="#22160F"/><path d="M256.7 234.5A7.2 7.2 0 1 1 263.9 222.8" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="238.7" cy="235.7" r="14.4" fill="#22160F"/><circle cx="248.9" cy="237.5" r="13.8" fill="#22160F"/><path d="M244.4 232.0A7.2 7.2 0 1 1 249.0 244.7" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="259.7" cy="235.4" r="13.0" fill="#22160F"/><path d="M265.8 232.4A6.8 6.8 0 1 1 253.1 234.0" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="241.4" cy="246.2" r="14.2" fill="#22160F"/><path d="M234.9 242.6A7.4 7.4 0 1 1 244.4 253.0" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="249.4" cy="251.9" r="12.2" fill="#22160F"/><path d="M255.7 251.2A6.3 6.3 0 1 1 244.0 248.6" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="245.7" cy="260.5" r="13.5" fill="#22160F"/><path d="M239.0 262.8A7.0 7.0 0 1 1 252.3 262.8" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="255.9" cy="257.9" r="11.8" fill="#22160F"/><path d="M261.4 260.6A6.1 6.1 0 1 1 253.2 252.5" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="266.3" cy="262.3" r="12.7" fill="#22160F"/><path d="M271.2 266.8A6.6 6.6 0 1 1 265.2 255.8" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="245.0" cy="275.6" r="12.7" fill="#22160F"/><circle cx="257.2" cy="271.3" r="12.6" fill="#22160F"/><circle cx="269.5" cy="271.8" r="10.6" fill="#22160F"/><path d="M265.5 275.6A5.5 5.5 0 1 1 275.0 271.2" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="251.0" cy="286.4" r="12.5" fill="#22160F"/><path d="M246.0 290.6A6.5 6.5 0 1 1 257.4 286.1" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="264.8" cy="279.8" r="13.5" fill="#22160F"/><path d="M258.8 276.3A7.0 7.0 0 1 1 267.4 286.4" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="250.0" cy="292.8" r="12.9" fill="#22160F"/><path d="M244.8 297.1A6.7 6.7 0 1 1 256.6 292.5" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="266.2" cy="296.7" r="11.9" fill="#22160F"/><path d="M260.1 297.5A6.2 6.2 0 1 1 271.6 299.9" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="257.3" cy="302.9" r="11.5" fill="#22160F"/><path d="M251.9 300.2A6.0 6.0 0 1 1 259.9 308.3" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="266.8" cy="301.5" r="13.8" fill="#22160F"/><path d="M265.3 294.5A7.2 7.2 0 1 1 263.7 308.0" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="281.2" cy="305.5" r="14.4" fill="#22160F"/><circle cx="258.4" cy="315.9" r="11.4" fill="#22160F"/><path d="M263.2 319.5A5.9 5.9 0 1 1 256.9 310.2" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="270.3" cy="318.8" r="10.6" fill="#22160F"/><path d="M265.2 316.5A5.5 5.5 0 1 1 272.8 323.7" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/></g>
-        <g id="head">
-          <ellipse cx="101" cy="172" rx="9" ry="12" fill="#E4B591"/>
-          <ellipse cx="219" cy="172" rx="9" ry="12" fill="#E4B591"/>
-          <circle cx="101" cy="185" r="3.6" fill="#E6BE45"/><circle cx="219" cy="185" r="3.6" fill="#E6BE45"/>
-          <ellipse cx="160" cy="168" rx="60" ry="56" fill="#EDC3A0"/>
-          <ellipse cx="160" cy="216" rx="30" ry="6" fill="#DDAA84" opacity=".35"/>
-          <ellipse cx="121" cy="190" rx="13" ry="8.5" fill="#F28B8B" opacity=".42"/>
-          <ellipse cx="199" cy="190" rx="13" ry="8.5" fill="#F28B8B" opacity=".42"/>
-          <path d="M124 143 Q137 136 150 141 M170 141 Q183 136 196 143" stroke="#3A2418" stroke-width="3.5" fill="none" stroke-linecap="round"/>
-          <g class="eye" id="eyeL"><ellipse cx="137" cy="162" rx="9.5" ry="10.5" fill="#fff"/>
-            <g class="pupil"><circle cx="137" cy="163" r="6.6" fill="#2A1A12"/><circle cx="139.5" cy="160" r="2.3" fill="#fff"/></g>
-            <path d="M126 157 Q137 148 148 156" stroke="#2A1A12" stroke-width="2.6" fill="none" stroke-linecap="round"/></g>
-          <g class="eye" id="eyeR"><ellipse cx="183" cy="162" rx="9.5" ry="10.5" fill="#fff"/>
-            <g class="pupil"><circle cx="183" cy="163" r="6.6" fill="#2A1A12"/><circle cx="185.5" cy="160" r="2.3" fill="#fff"/></g>
-            <path d="M172 156 Q183 148 194 157" stroke="#2A1A12" stroke-width="2.6" fill="none" stroke-linecap="round"/></g>
-          <path d="M157 178 Q160 182 164 179" stroke="#C98D66" stroke-width="2.4" fill="none" stroke-linecap="round"/>
-          <path d="M146 193 Q160 208 174 193 Q160 198 146 193Z" fill="#A63A48"/>
-          <path d="M152 199 Q160 204 168 199 Q160 201 152 199Z" fill="#F27C86"/>
-          <circle cx="106.4" cy="140.5" r="13.2" fill="#22160F"/><path d="M103.8 146.8A6.9 6.9 0 1 1 112.4 137.1" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="111.7" cy="129.8" r="13.2" fill="#22160F"/><path d="M118.5 129.3A6.9 6.9 0 1 1 105.9 126.0" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="119.0" cy="120.4" r="12.2" fill="#22160F"/><path d="M123.3 115.7A6.3 6.3 0 1 1 112.7 121.5" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="128.1" cy="112.7" r="11.4" fill="#22160F"/><path d="M134.0 112.4A5.9 5.9 0 1 1 123.2 109.4" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="138.6" cy="107.2" r="12.5" fill="#22160F"/><path d="M139.3 113.6A6.5 6.5 0 1 1 142.1 101.6" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="150.1" cy="103.9" r="13.5" fill="#22160F"/><path d="M145.9 98.2A7.0 7.0 0 1 1 149.9 110.9" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="162.0" cy="103.0" r="13.8" fill="#22160F"/><path d="M165.4 96.7A7.2 7.2 0 1 1 155.4 105.9" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="173.8" cy="104.7" r="13.4" fill="#22160F"/><path d="M166.8 104.2A7.0 7.0 0 1 1 179.0 109.3" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="185.0" cy="108.8" r="14.0" fill="#22160F"/><path d="M191.7 111.6A7.3 7.3 0 1 1 181.5 102.4" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="176.0" cy="108.0" r="11.0" fill="#22160F"/><path d="M179.9 103.8A5.7 5.7 0 1 1 170.4 108.9" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="194.0" cy="114.0" r="12.0" fill="#22160F"/><path d="M192.5 107.9A6.2 6.2 0 1 1 191.5 119.7" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="208.0" cy="126.0" r="12.0" fill="#22160F"/><path d="M208.0 132.2A6.2 6.2 0 1 1 211.8 121.1" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="214.0" cy="142.0" r="11.0" fill="#22160F"/><path d="M216.0 136.6A5.7 5.7 0 1 1 209.1 145.0" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/>
-          <g class="sway2"><circle cx="93.3" cy="146.2" r="12.7" fill="#22160F"/><path d="M95.5 152.4A6.6 6.6 0 1 1 95.3 140.0" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="94.3" cy="157.9" r="10.7" fill="#22160F"/><path d="M89.1 156.0A5.6 5.6 0 1 1 97.3 162.5" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="91.3" cy="167.9" r="11.1" fill="#22160F"/><path d="M93.0 162.4A5.8 5.8 0 1 1 86.5 171.2" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="90.9" cy="180.6" r="11.9" fill="#22160F"/><path d="M96.0 177.2A6.2 6.2 0 1 1 84.7 180.2" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="91.2" cy="187.9" r="11.4" fill="#22160F"/><path d="M96.0 191.4A5.9 5.9 0 1 1 89.6 182.2" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="95.8" cy="200.1" r="12.7" fill="#22160F"/><path d="M99.1 194.4A6.6 6.6 0 1 1 89.7 202.6" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="95.3" cy="210.1" r="11.5" fill="#22160F"/><path d="M98.8 205.2A6.0 6.0 0 1 1 89.6 211.8" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="227.7" cy="148.4" r="10.7" fill="#22160F"/><path d="M233.2 148.0A5.6 5.6 0 1 1 223.1 145.4" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="225.2" cy="157.8" r="12.7" fill="#22160F"/><path d="M224.3 151.2A6.6 6.6 0 1 1 222.0 163.5" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="225.2" cy="169.0" r="11.6" fill="#22160F"/><path d="M231.2 169.6A6.0 6.0 0 1 1 220.8 164.9" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="226.0" cy="177.9" r="12.1" fill="#22160F"/><path d="M224.9 184.1A6.3 6.3 0 1 1 230.7 173.7" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="227.6" cy="191.2" r="11.0" fill="#22160F"/><path d="M231.6 195.3A5.7 5.7 0 1 1 227.0 185.5" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="228.2" cy="200.8" r="10.8" fill="#22160F"/><path d="M232.4 204.5A5.6 5.6 0 1 1 227.1 195.3" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="229.6" cy="212.7" r="11.4" fill="#22160F"/><path d="M231.6 218.2A5.9 5.9 0 1 1 231.5 207.0" stroke="#4D3127" stroke-width="2" fill="none" stroke-linecap="round"/></g>
-          <g id="glasses">
-            <path d="M115 160 L102 165 M205 160 L218 165" stroke="#111" stroke-width="4" stroke-linecap="round"/>
-            <rect x="113" y="148" width="44" height="29" rx="13" fill="#141414"/>
-            <rect x="163" y="148" width="44" height="29" rx="13" fill="#141414"/>
-            <path d="M157 157 Q160 152 163 157" stroke="#141414" stroke-width="4" fill="none"/>
-            <path d="M121 152 L133 152 L123 171Z M171 152 L183 152 L173 171Z" fill="#fff" opacity=".22"/>
-          </g>
-        </g>
-      </svg>
+  <header class="mast">
+    <div class="ear"><b>Now seeking</b>New-grad roles in software engineering, AI &amp; ML · 2027</div>
+    <div>
+      <div class="name">Harshini BV</div>
+      <div class="motto">Real problems, engineered solutions.</div>
     </div>
-    <span class="hint">psst: hover &amp; click her</span>
-    <button class="kolam-btn" id="newKolam">↻ draw a new kolam</button>
+    <div class="ear"><b>Edition 2027</b>MS Computer Science, Arizona State University</div>
+  </header>
+
+  <div class="dateline label dbl">
+    <span>Software Engineering · Artificial Intelligence · Machine Learning</span>
+    <span id="issue">Vol. MMXXVII</span>
   </div>
-</header>
+  <nav class="index label">
+    <a href="#a"><b>A</b>Front Page</a><a href="#b"><b>B</b>Career</a><a href="#c"><b>C</b>Projects</a><a href="#d"><b>D</b>Research &amp; Contact</a>
+  </nav>
+
+  <!-- ================= A · FRONT PAGE ================= -->
+  <main id="a">
+    <div class="front">
+      <article class="lead">
+        <div class="kicker">Profile · Tempe, Arizona</div>
+        <h1>The Engineer Who Can't Walk Past a Real Problem</h1>
+        <p class="dek">Harshini BV builds across software engineering, AI and machine learning. She is finishing an MS in Computer Science at Arizona State University and is looking for new-grad roles in 2027.</p>
+        <div class="byline"><span>Profile</span><span>MS CS, Arizona State University · BTech CS, Vellore Institute of Technology</span></div>
+        <div class="cols">
+          <p class="drop">Harshini BV doesn't stay in one corner of computer science. Her work spans production software engineering, LLM agents, machine learning research and a published cybersecurity paper, and she moves between them depending on what the problem needs.</p>
+          <p>Her method is simple. When a real-world problem looks solvable with code, it tends to occupy the next few weeks until it is done. That habit has produced eviction forecasts for Arizona, predator alerts for farmers, and a satellite model that measures how much of the Amazon has been cleared.</p>
+          <div class="pull">“When a real-world problem looks solvable with code, it tends to occupy the next few weeks until it is done.”</div>
+          <p>Most recently she shipped production features as a software engineering intern at Optiwise, on a four-service backend with about 2,400 automated tests. Before Arizona State, she earned a BTech in Computer Science at Vellore Institute of Technology, where she published her first paper.</p>
+          <p>When a result looks wrong, she digs until she finds out why. On her deforestation project that meant tracing false alarms to the training labels rather than the model, which lifted precision from 59% to 88%.</p>
+        </div>
+      </article>
+
+      <aside class="side">
+        <div class="box reveal">
+          <div class="box-head">By the Numbers</div>
+          <div class="num"><b>3.94<small>/4</small></b><span>GPA, MS Computer Science, Arizona State University</span></div>
+          <div class="num"><b>3.93<small>/4</small></b><span>GPA, BTech Computer Science, Vellore Institute of Technology</span></div>
+        </div>
+        <div class="box inside reveal">
+          <div class="box-head">Inside This Edition</div>
+          <a href="#b">Career <span>B1</span></a>
+          <a href="#c1">AI &amp; Agents <span>C1</span></a>
+          <a href="#c2">Machine Learning &amp; Vision <span>C2</span></a>
+          <a href="#c3">Data for Social Good <span>C3</span></a>
+          <a href="#c4">Software &amp; Full-Stack <span>C4</span></a>
+          <a href="#d">Research &amp; Contact <span>D1</span></a>
+        </div>
+      </aside>
+    </div>
+
+    <div class="tops dbl">
+      <article class="reveal">
+        <div class="kicker">Machine Learning</div>
+        <h2>Who Counts the Amazon's Lost Trees? She Built a Model to Find Out</h2>
+        <div class="stat"><span>0.91</span> test IoU</div>
+        <p>A U-Net trained from scratch on Sentinel-2 imagery mapped about 6,800 hectares of cleared forest in Rondônia, Brazil.</p>
+        <a class="jump" href="#forest">Continued on C2 →</a>
+      </article>
+      <article class="reveal">
+        <div class="kicker">LLM Agents</div>
+        <h2>Truck Billing Took 45 Minutes. Her Team Got It to 90 Seconds</h2>
+        <div class="stat"><span>45 min → 90 s</span></div>
+        <p>DispatchIQ scores drivers, explains every pick, and reads shipping paperwork with a vision model.</p>
+        <a class="jump" href="#dispatch">Continued on C1 →</a>
+      </article>
+      <article class="reveal">
+        <div class="kicker">Research</div>
+        <h2>Teaching AI Assistants What to Forget</h2>
+        <div class="stat"><span>~60% fewer</span> memories stored</div>
+        <p>A co-authored paper on controlled memory for long-running assistants, reaching 66% accuracy on PersonaMem.</p>
+        <a class="jump" href="#memory">Continued on C1 →</a>
+      </article>
+    </div>
+  </main>
+
+  <!-- ================= B · CAREER ================= -->
+  <section id="b">
+    <div class="runhead"><div class="sec"><b>B</b>Career</div><span class="label">Experience &amp; education</span></div>
+
+    <div class="role reveal">
+      <div><div class="when">Jun – Aug 2026</div><div class="where">Remote</div></div>
+      <div>
+        <h3>Software Engineer Intern, Optiwise</h3>
+        <div class="org">AgriChoice, a farm-equipment rental marketplace</div>
+        <ul>
+          <li>Built a rental-extension billing feature end to end across four TypeScript/Fastify production services and a Kotlin/Jetpack Compose Android client, with GST-compliant documents in four languages and 684 stored records regenerated.</li>
+          <li>Worked on a four-service microservices backend (auth, catalog &amp; bookings, payments/escrow, background worker) with ~2,400 passing automated tests and event-driven messaging via pg-boss.</li>
+          <li>Removed double-booking risk across a 13-state booking state machine with optimistic concurrency, partial-unique-index constraints and shared Zod contracts; built a cursor-paginated admin API with audit logging.</li>
+          <li>Diagnosed three stacked production defects and five client–server contract mismatches the test suite missed, and drove 42 commits of fixes through code review.</li>
+          <li>Deployed all four services to Fly.io staging and validated the Android client through its offline-first booking queue.</li>
+        </ul>
+        <div class="tags">TypeScript · Node.js · Fastify · Prisma · PostgreSQL/PostGIS · Kotlin · Jetpack Compose · Fly.io</div>
+      </div>
+    </div>
+    <div class="role reveal">
+      <div><div class="when">May 2026 – present</div><div class="where">Tempe, AZ</div></div>
+      <div>
+        <h3>Graduate Service Assistant, Arizona State University</h3>
+        <div class="org">School of ECEE</div>
+        <ul><li>Evaluate coursework for four sections of the Random Signals curriculum using structured rubrics, with targeted feedback to close conceptual gaps.</li></ul>
+      </div>
+    </div>
+    <div class="role reveal">
+      <div><div class="when">Aug 2025 – May 2027</div><div class="where">Tempe, AZ</div></div>
+      <div>
+        <h3>MS Computer Science, Arizona State University</h3>
+        <div class="org">GPA 3.94/4</div>
+        <ul><li>Coursework includes knowledge representation and multimedia &amp; web databases.</li><li>Co-authored research on controlled persistent memory for LLM assistants; worked on Clickless and Displaced Voices.</li></ul>
+      </div>
+    </div>
+    <div class="role reveal">
+      <div><div class="when">Aug – Sep 2023</div><div class="where">Siruseri, India · On-site</div></div>
+      <div>
+        <h3>ML Intern, Interlace India</h3>
+        <ul><li>Built a real-time email-classification pipeline in Python, handling class imbalance with keyword weighting and threshold tuning to reduce false negatives, and shared findings with stakeholders.</li></ul>
+      </div>
+    </div>
+    <div class="role reveal">
+      <div><div class="when">2021 – 2025</div><div class="where">Chennai, India</div></div>
+      <div>
+        <h3>BTech Computer Science, Vellore Institute of Technology</h3>
+        <div class="org">GPA 3.93/4</div>
+        <ul><li>Published at ICSTSN 2024 (see Research, D1). Capstone: livestock protection with computer vision. Course project: MeloLearn.</li><li>Technical team member, IEEE Women in Engineering; finance team, NexSeed Club.</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= C · PROJECTS ================= -->
+  <section id="c">
+    <div class="runhead"><div class="sec"><b>C</b>Projects</div><span class="label">Eight projects, four desks</span></div>
+
+    <!-- C1 -->
+    <div class="desk" id="c1">
+      <div class="desk-head"><h3>AI &amp; Agents</h3><span>C1</span></div>
+
+      <article class="story" id="dispatch">
+        <div class="kicker">Hackathon · GlobeHack Season 1, Trucker Path Marketplace &amp; Growth Track</div>
+        <h2>DispatchIQ: One AI That Knows Every Driver, Every Load, Every Dollar</h2>
+        <p class="dek">An AI command center that picks the best driver, warns about trouble before it happens, and turns a photo of a delivery receipt into an invoice in 90 seconds.</p>
+        <div class="meta"><span>Next.js · TypeScript · Groq LLM · Trucker Path NavPro · Google Maps · OpenWeather · Twilio</span><span class="jumpline">Continued from A1</span></div>
+        <div class="feature">
+          <div class="cols">
+            <h4>The problem</h4>
+            <p>Fleet dispatchers weigh driver hours, location, cost and safety by hand, react to fuel, weather and fatigue problems after they happen, and spend around 45 minutes on the paperwork for each load.</p>
+            <h4>What she built</h4>
+            <ul>
+              <li><b>Smart dispatch:</b> Groq's llama-3.3-70b scores every driver on Hours-of-Service remaining, GPS proximity, cost per mile and safety, recommends the best one with its reasoning, creates the trip in NavPro and texts the driver.</li>
+              <li><b>Proactive alerts:</b> watches fuel, HOS, severe weather and route deviation, finds the nearest truck stops, and sends SMS warnings before problems hit.</li>
+              <li><b>Cost intelligence:</b> a custom dynamic-programming knapsack picks the most profitable combination of loads within weight and HOS limits, with mandatory FMCSA rest and fuel stops on the route.</li>
+              <li><b>Safety and compliance:</b> a pre-dispatch FMCSA check blocks any dispatch with under 2 hours of HOS left, plus fatigue scoring and a full DOT audit log.</li>
+              <li><b>Billing autopilot:</b> Groq Vision (llama-3.2-11b) reads bill-of-lading, delivery and receipt photos, extracts every field, generates the invoice and uploads it to NavPro.</li>
+            </ul>
+            <h4>The result</h4>
+            <p>Ten API routes behind one dashboard, a demo mode that runs without any keys, and <b>billing cut from 45 minutes to 90 seconds.</b></p>
+          </div>
+          <figure class="reveal">
+            <div class="fig">
+              <h5>Five problems, one console</h5>
+              <ol class="flow">
+                <li><span class="k">Smart Dispatch.</span> AI driver scoring with reasons</li>
+                <li><span class="k">Proactive Alerts.</span> Fuel, HOS, weather, route deviation</li>
+                <li><span class="k">Cost Intelligence.</span> Knapsack load selection</li>
+                <li><span class="k">Safety &amp; Compliance.</span> FMCSA checks block unsafe trips</li>
+                <li><span class="k">Billing Autopilot.</span> Photo to invoice, 45 min → 90 s</li>
+              </ol>
+            </div>
+            <figcaption>Each module is a tab in one Next.js dashboard, backed by its own API route.</figcaption>
+          </figure>
+        </div>
+        <div class="tail"><a class="gh" href="https://github.com/Harshbv/Globehacks" target="_blank" rel="noopener">View code on GitHub ↗</a><a class="jump" href="#a">← Back to front page</a></div>
+      </article>
+
+      <article class="story" id="memory">
+        <div class="kicker">Research · CSE 572 Data Mining, Arizona State University · 2026</div>
+        <h2>Teaching AI Assistants What to Forget</h2>
+        <p class="dek">A controlled memory layer that decides what is worth remembering, retires preferences that changed, and matches vanilla RAG's accuracy with about a quarter of the memory.</p>
+        <div class="meta"><span>Python · ChromaDB · sentence-transformers · BM25 · Groq (Llama 3.3 70B) · PersonaMem</span><span class="jumpline">Continued from A1</span></div>
+        <div class="feature">
+          <div class="cols">
+            <h4>The problem</h4>
+            <p>Assistants that remember users usually store everything and retrieve by similarity. Memory bloats, and stale preferences come back: a user who said they like tea in turn 3 and switched to coffee in turn 40 gets both retrieved.</p>
+            <h4>What the team built</h4>
+            <ul>
+              <li><b>Write router:</b> extracts preference statements ("prefer", "don't like", "from now on") and normalizes them, so only what matters is stored.</li>
+              <li><b>Versioning:</b> when a new memory conflicts with an old one, the old one is marked superseded and linked rather than deleted, so the history stays auditable.</li>
+              <li><b>Retrieval:</b> only active memories are eligible; dense (MiniLM), BM25, option-conditioned and temporal signals are fused, then deduplicated.</li>
+              <li><b>Evaluation:</b> one shared config compares no memory, summary-only, vanilla RAG and controlled memory on the PersonaMem v1 (32k) benchmark, with per-episode logs of every write and retrieval.</li>
+            </ul>
+            <h4>The result</h4>
+            <p>On the full 588-episode evaluation, the best variant reached <b>66% accuracy while storing ~60% fewer memories</b> than vanilla RAG, retiring an average of 7.8 outdated memories per episode. Co-authored with three teammates.</p>
+          </div>
+          <figure class="reveal">
+            <div class="fig">
+              <h5>Same accuracy, a quarter of the memory</h5>
+              <div class="sub">Accuracy, 100-episode dev split</div>
+              <div class="bar"><span>No memory</span><div class="track"><div class="fill" data-w="43"></div></div><b>43%</b></div>
+              <div class="bar"><span>Summary only</span><div class="track"><div class="fill" data-w="42"></div></div><b>42%</b></div>
+              <div class="bar"><span>Vanilla RAG</span><div class="track"><div class="fill" data-w="69"></div></div><b>69%</b></div>
+              <div class="bar hi"><span>Controlled</span><div class="track"><div class="fill" data-w="72"></div></div><b>72%</b></div>
+              <div class="sub">Memories stored per episode</div>
+              <div class="bar"><span>Vanilla RAG</span><div class="track"><div class="fill" data-w="100"></div></div><b>177.3</b></div>
+              <div class="bar hi"><span>Controlled</span><div class="track"><div class="fill" data-w="28"></div></div><b>49.9</b></div>
+            </div>
+            <figcaption>Fig. 2. Dev-split results from the project repository.</figcaption>
+          </figure>
+        </div>
+        <div class="tail"><a class="gh" href="https://github.com/Harshbv/controlled_persistent_memory" target="_blank" rel="noopener">View code on GitHub ↗</a><a class="jump" href="#a">← Back to front page</a></div>
+      </article>
+
+      <article class="story" id="clickless">
+        <div class="kicker">Agents · Retrieval · Arizona State University, Fall 2025</div>
+        <h2>Clickless: Shopping for Headphones by Just Saying What You Want</h2>
+        <p class="dek">"Wireless headphones under $100 with good bass for the gym." An agentic system turns that sentence into ranked, review-backed recommendations.</p>
+        <div class="meta"><span>Python · OpenAI API · Streamlit · Streaming JSONL · UCSD Amazon Product Dataset</span></div>
+        <div class="feature">
+          <div class="cols">
+            <h4>The problem</h4>
+            <p>Shopping pages make people translate what they want into dozens of filters, then read thousands of reviews to trust a choice.</p>
+            <h4>What she built</h4>
+            <ul>
+              <li><b>Planner → Retriever → Ranker → Explainer:</b> the planner extracts budget, use case and priorities; the ranker scores budget fit, ratings, feature matches and use-case relevance; the explainer writes recommendations that cite real review pros and cons.</li>
+              <li><b>Conversational refinement:</b> "make it wireless" or "increase budget to $150" keeps the earlier context and adjusts the search.</li>
+              <li><b>Data pipeline:</b> streamed 25–30 GB of raw Amazon data into a compact index of products with aggregated review statistics.</li>
+              <li>Deterministic ranking around the LLM keeps recommendations grounded in real products.</li>
+            </ul>
+            <h4>The result</h4>
+            <p><b>92% precision@50 and 93% budget-extraction accuracy.</b></p>
+          </div>
+          <figure class="reveal">
+            <div class="fig">
+              <h5>From raw data to a searchable index</h5>
+              <ul class="facts">
+                <li><b>1.6M</b><span><span class="k">product entries scanned</span>Electronics metadata, filtered by keyword heuristics</span></li>
+                <li><b>27,628</b><span><span class="k">priced headphones kept</span>Accessories, cables and adapters removed</span></li>
+                <li><b>43.9M</b><span><span class="k">reviews streamed</span>Down to 5.5M headphone reviews</span></li>
+                <li><b>12,339</b><span><span class="k">products in the final index</span>With rating stats and extracted pros and cons</span></li>
+              </ul>
+            </div>
+            <figcaption>Built memory-efficiently with streaming JSONL.</figcaption>
+          </figure>
+        </div>
+        <div class="tail"><a class="gh" href="https://github.com/Harshbv/clickless" target="_blank" rel="noopener">View code on GitHub ↗</a></div>
+      </article>
+
+      <article class="story" id="linkgenie">
+        <div class="kicker">LLM Application · Personal project</div>
+        <h2>A LinkedIn Post Generator That Sounds Like a Person</h2>
+        <p class="dek">Give it a topic, a tone and an audience, and it writes a post in natural LinkedIn style, so staying active doesn't cost 30 minutes a post.</p>
+        <div class="meta"><span>Python · Streamlit · LangChain · Groq LLM · Few-shot prompting</span></div>
+        <div class="feature">
+          <div class="cols">
+            <h4>The problem</h4>
+            <p>Generic LLM output sounds the same for everyone, and writing a good post by hand takes students and professionals half an hour or more.</p>
+            <h4>What she built</h4>
+            <ul>
+              <li><b>Style from real posts:</b> a curated dataset of real LinkedIn posts is preprocessed and tagged, and the app pulls examples that match the chosen topic as few-shot context.</li>
+              <li><b>Controls:</b> topic tag, length (short, medium, long), language (English or Hinglish), tone (professional, casual, motivational, funny) and an optional target audience such as "hiring managers in SaaS".</li>
+              <li><b>Clean structure:</b> separate modules for preprocessing, few-shot retrieval, the Groq calls via LangChain, and prompt building, with API keys kept out of the repository.</li>
+              <li><b>Ready to post:</b> output as text, a copy-friendly block and a downloadable .txt file, in a Streamlit UI that runs with one command.</li>
+            </ul>
+          </div>
+          <figure class="reveal">
+            <div class="fig">
+              <h5>How a post gets written</h5>
+              <ol class="flow">
+                <li><span class="k">Choose</span> a topic, tone, length, language and audience</li>
+                <li><span class="k">Retrieve</span> matching example posts by tag</li>
+                <li><span class="k">Build</span> a structured few-shot prompt</li>
+                <li><span class="k">Generate</span> with the Groq LLM through LangChain</li>
+                <li><span class="k">Copy or download</span> the finished post</li>
+              </ol>
+            </div>
+            <figcaption>Built for students, professionals and creators who want consistent, on-brand posts.</figcaption>
+          </figure>
+        </div>
+        <div class="tail"><a class="gh" href="https://github.com/Harshbv/LinkedIn-Post-Generator" target="_blank" rel="noopener">View code on GitHub ↗</a></div>
+      </article>
+    </div>
+
+    <!-- C2 -->
+    <div class="desk" id="c2">
+      <div class="desk-head"><h3>Machine Learning &amp; Vision</h3><span>C2</span></div>
+
+      <article class="story" id="forest">
+        <div class="kicker">Machine Learning · Remote Sensing · October 2026</div>
+        <h2>Where Did the Forest Go? Mapping Amazon Deforestation From Space</h2>
+        <p class="dek">About 6,800 hectares of natural forest cleared in Rondônia, Brazil, between 2021 and 2026, roughly 9,500 football fields, measured with validated uncertainty.</p>
+        <div class="meta"><span>Python · PyTorch · U-Net · Sentinel-2 · MapBiomas · GeoPandas · Rasterio · Folium</span><span class="jumpline">Continued from A1</span></div>
+        <div class="feature">
+          <div class="cols">
+            <h4>The question</h4>
+            <p>News reports say the Amazon lost so many football fields of forest this year. Who is actually counting the trees? Sentinel-2 photographs the planet every few days for free, so she set out to do the counting herself, from raw satellite images to a map of exactly where the forest went, in a 55 × 55 km area of one of the most deforested places on Earth.</p>
+            <h4>What she built</h4>
+            <ul>
+              <li>A pipeline from raw imagery: STAC search, cloud masking, dry-season median composites (July–August, when pasture and forest are easiest to tell apart) and brightness matching between years.</li>
+              <li>A U-Net trained from scratch on a Kaggle GPU, tested on squares from different parts of the map than it learned from, so the score is honest.</li>
+              <li>Change detection that counts a pixel as cleared only when the model is confident it was forest in 2021 and is not in 2026, turned into 926 clickable patches on an interactive map.</li>
+            </ul>
+            <h4>Three versions, two blind checks</h4>
+            <p>Version 1 learned from ESA WorldCover and looked strong, but a blind hand check of 300 points showed it mistook crops, plantations and young regrowth for forest. Adding shortwave-infrared bands (version 2) changed nothing: the model was copying its labels. Version 3 changed only the labels, to MapBiomas, and a fresh blind check of 300 more points confirmed the fix: precision for cleared forest rose from 59% to 88%, at 92% overall accuracy.</p>
+          </div>
+          <figure class="reveal">
+            <div class="fig">
+              <h5>Fixing the labels, not the model</h5>
+              <div class="sub">Precision for cleared forest</div>
+              <div class="bar"><span>WorldCover (v1)</span><div class="track"><div class="fill" data-w="59"></div></div><b>59%</b></div>
+              <div class="bar hi"><span>MapBiomas (v3)</span><div class="track"><div class="fill" data-w="88"></div></div><b>88%</b></div>
+              <div class="sub">Test IoU</div>
+              <div class="bar"><span>NDVI baseline</span><div class="track"><div class="fill" data-w="85"></div></div><b>0.85</b></div>
+              <div class="bar hi"><span>U-Net</span><div class="track"><div class="fill" data-w="91"></div></div><b>0.91</b></div>
+            </div>
+            <figcaption>Fig. 1. Better training labels did more than any change to the model. Labelling was blind: the model's answer was never shown.</figcaption>
+          </figure>
+        </div>
+        <div class="tail"><a class="gh" href="https://github.com/Harshbv/where-did-the-forest-go" target="_blank" rel="noopener">View code on GitHub ↗</a><a class="jump" href="#a">← Back to front page</a></div>
+      </article>
+
+      <article class="story" id="livestock">
+        <div class="kicker">Computer Vision · VIT capstone · 2024–25</div>
+        <h2>Cameras That Count the Herd and Warn of Predators</h2>
+        <p class="dek">A real-time monitoring system that counts cattle from farm camera feeds and alerts the owner the moment a predator appears.</p>
+        <div class="meta"><span>Faster R-CNN · Deep CNNs · Generative AI preprocessing · OpenCV</span></div>
+        <div class="feature">
+          <div class="cols">
+            <h4>The problem</h4>
+            <p>Farmers lose animals to predators, often at night or far from the house, and still spend time on manual headcounts.</p>
+            <h4>What she built</h4>
+            <ul>
+              <li>A detection pipeline using Faster R-CNN with generative-AI preprocessing to count cattle and spot predator intrusions in farmland imagery.</li>
+              <li>A classifier that separates cattle from predators and triggers instant SMS or app alerts to farm owners.</li>
+              <li>An architecture and augmentation strategy chosen after reviewing 15+ papers on CNN and R-CNN animal detection, for robustness across varied field conditions.</li>
+            </ul>
+          </div>
+          <figure class="reveal">
+            <div class="fig">
+              <h5>Five modules, camera to phone</h5>
+              <ol class="flow">
+                <li><span class="k">Capture</span> farmland camera imagery</li>
+                <li><span class="k">Preprocess</span> with generative AI</li>
+                <li><span class="k">Count</span> cattle with Faster R-CNN</li>
+                <li><span class="k">Detect</span> predator intrusions</li>
+                <li><span class="k">Alert</span> the owner by SMS or app</li>
+              </ol>
+            </div>
+          </figure>
+        </div>
+        <div class="tail"><span class="gh off">Code not public</span></div>
+      </article>
+    </div>
+
+    <!-- C3 -->
+    <div class="desk" id="c3">
+      <div class="desk-head"><h3>Data for Social Good</h3><span>C3</span></div>
+
+      <article class="story" id="displaced">
+        <div class="kicker">Data Science · ASU team project · 2025</div>
+        <h2>Displaced Voices: Forecasting Evictions So Help Arrives Earlier</h2>
+        <p class="dek">A projected 54,143 eviction filings in Arizona for 2025, a 16% rise over 2022, built to help the state budget rental assistance before the need peaks. Presented at the ASU Library.</p>
+        <div class="meta"><span>Python · Time-series forecasting · Regression analysis</span></div>
+        <div class="feature">
+          <div class="cols">
+            <h4>The problem</h4>
+            <p>Rental assistance is usually budgeted after evictions happen. Forecasting demand lets the state plan ahead.</p>
+            <h4>What she built</h4>
+            <ul>
+              <li>Time-series forecasts of Arizona eviction filings as part of a five-person predictive-modeling track.</li>
+              <li>An analysis of three years (2022–2024) of Maricopa County eviction records to find seasonal risk windows.</li>
+              <li>With the visualization and statistics tracks, a regression model turned into a practical forecasting tool.</li>
+            </ul>
+          </div>
+          <figure class="reveal">
+            <div class="fig">
+              <h5>Key findings</h5>
+              <ul class="facts">
+                <li><b>54,143</b><span><span class="k">filings projected for 2025</span>Arizona statewide</span></li>
+                <li><b>+16%</b><span><span class="k">over 2022</span>A rising trend to plan for</span></li>
+                <li><b>Summer</b><span><span class="k">highest-risk season</span>Consistent across 2022–2024</span></li>
+                <li><b>No. 1</b><span><span class="k">predictor</span>Single-female-parent household rate</span></li>
+              </ul>
+            </div>
+          </figure>
+        </div>
+        <div class="tail"><span class="gh off">Code not public</span></div>
+      </article>
+    </div>
+
+    <!-- C4 -->
+    <div class="desk" id="c4">
+      <div class="desk-head"><h3>Software &amp; Full-Stack</h3><span>C4</span></div>
+
+      <article class="story" id="melolearn">
+        <div class="kicker">Full-stack · VIT course project · 2024</div>
+        <h2>MeloLearn: A Platform Where Learning Sounds Like Your Playlist</h2>
+        <p class="dek">An audio-first learning site where students listen to lessons, create and edit their own tracks, and climb a live leaderboard.</p>
+        <div class="meta"><span>HTML · CSS · JavaScript · Bootstrap · Express.js</span></div>
+        <div class="feature">
+          <div class="cols">
+            <h4>The problem</h4>
+            <p>Learning platforms rarely let students create, and music learners had no single place to practise remixing and get ranked feedback.</p>
+            <h4>What she built</h4>
+            <ul>
+              <li>A full-stack platform with pages to learn, listen, create and edit audio, plus course pages.</li>
+              <li>A ranking system that scores user compositions on originality, creativity and technical proficiency and surfaces a live Top 10 leaderboard.</li>
+              <li>An in-browser audio lab with trim, reverse, speed and voice-changer tools, and a carousel for browsing curated course content.</li>
+            </ul>
+          </div>
+          <figure class="reveal">
+            <div class="fig">
+              <h5>Inside the platform</h5>
+              <ul class="facts">
+                <li><b>Learn</b><span>Audio lessons and courses</span></li>
+                <li><b>Create</b><span>Original compositions and remixes</span></li>
+                <li><b>Edit</b><span>Trim, reverse, speed and voice changer</span></li>
+                <li><b>Rank</b><span>Live Top 10 leaderboard</span></li>
+              </ul>
+            </div>
+          </figure>
+        </div>
+        <div class="tail"><a class="gh" href="https://github.com/Harshbv/MeloLearn" target="_blank" rel="noopener">View code on GitHub ↗</a></div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ================= D · RESEARCH & CONTACT ================= -->
+  <section id="d">
+    <div class="runhead"><div class="sec"><b>D</b>Research &amp; Contact</div><span class="label">D1</span></div>
+    <div class="last">
+      <section class="reveal">
+        <div class="sec-head">Research</div>
+        <div class="research">
+          <div class="kicker">Cybersecurity · ICSTSN 2024</div>
+          <h3>OTP Verification &amp; Zero Trust Security for RBAC in Medical Records</h3>
+          <p>A Zero Trust architecture for hospital records combining OTP verification, role-based access, bcrypt/Argon2 hashing, JWT sessions and AES/SHA-256 signed audit logs for HIPAA-aligned, tamper-evident access. Cited in later Zero Trust research.</p>
+        </div>
+      </section>
+      <section class="reveal">
+        <div class="sec-head">Outside Work</div>
+        <p>After a hectic stretch of project work, cooking is how she unwinds, and folk dance does the same. Journaling keeps her mindset positive.</p>
+      </section>
+      <section id="contact" class="contact reveal">
+        <div class="sec-head">Correspondence</div>
+        <button id="copyMail"><span>harshinibv17@gmail.com</span><span id="copyLbl">Copy</span></button>
+        <a href="https://www.linkedin.com/in/harshini-bv-551019220" target="_blank" rel="noopener"><span>LinkedIn</span><span>↗</span></a>
+        <a href="https://github.com/Harshbv" target="_blank" rel="noopener"><span>GitHub</span><span>↗</span></a>
+        <a class="cvbtn" href="cv/Harshini_BV_CV.pdf" target="_blank" rel="noopener">Download CV</a>
+      </section>
+    </div>
+  </section>
+
+  <footer class="label dbl">
+    <span>© <span id="yr">2026</span> Harshini BV</span>
+    <span>Tempe, Arizona</span>
+  </footer>
 </div>
-<div class="zari"></div>
-
-<div class="marquee" aria-hidden="true"><div class="track" id="track"></div></div>
-
-<!-- ABOUT -->
-<section id="about">
-  <div class="wrap about-grid">
-    <div class="reveal about-text">
-      <div class="eyebrow">என்னைப் பற்றி · about me</div>
-      <h2 class="sec-title">Show me a real problem 👀</h2>
-      <p>I don't stick to one lane in CS. I like the whole thing: <b>software engineering, AI, ML</b>, and even a <b>cybersecurity publication</b> along the way.</p>
-      <p>Here's how I work. I spot a real-life problem that my tech skills could fix, and that's it. <b>Hurray!</b> 🎉 It moves into my head and stays there for the next couple of weeks, until it's done.</p>
-      <div class="note">
-        <div class="note-tag">✦ you might notice</div>
-        Almost everything I've built points at someone real: families facing eviction, farmers losing cattle to predators, a forest quietly disappearing. And when a result looks off, I don't shrug it off. I dig until I find out why. That's how <b>59% precision became 88%</b>.
-      </div>
-      <p>BTech at <b>VIT</b> → MS CS at <b>ASU</b>. Off the keyboard I'm dancing, making dosas (still hunting for a crispy one in Arizona), or journaling. Try all three ↓</p>
-      <div class="sidequests">✦ Side quests: IEEE Women in Engineering (technical team) · NexSeed Club (finance) · presented <i>Displaced Voices</i> at ASU Library</div>
-    </div>
-    <div class="stats reveal">
-      <div class="stat"><div class="n" data-count="9.17" data-dec="2">0</div><div class="l">undergrad CGPA at VIT</div></div>
-      <div class="stat"><div class="n" data-count="8">0</div><div class="l">projects shipped (and counting)</div></div>
-      <div class="stat"><div class="n" data-count="0.91" data-dec="2">0</div><div class="l">test IoU on my deforestation U-Net</div></div>
-      <div class="stat"><div class="n">∞</div><div class="l">dosas eaten, zero regrets</div></div>
-    </div>
-  </div>
-</section>
-
-<div class="zari"></div>
-
-<!-- PROJECTS -->
-<section id="work">
-  <div class="wrap">
-    <div class="reveal">
-      <div class="eyebrow">படைப்புகள் · things i made</div>
-      <h2 class="sec-title">Projects</h2>
-      <p class="sec-sub">Click any card for the full story. 🌶 = how much it melted my brain.</p>
-    </div>
-    <div class="filters reveal" id="filters">
-      <button class="chip on" data-f="all">All</button>
-      <button class="chip" data-f="llm">LLMs &amp; Agents</button>
-      <button class="chip" data-f="vision">Computer Vision</button>
-      <button class="chip" data-f="data">Data for Good</button>
-      <button class="chip" data-f="web">Full-stack</button>
-    </div>
-    <div class="grid" id="grid"></div>
-  </div>
-</section>
-
-<dialog id="dlg"><button class="x" onclick="dlg.close()" aria-label="Close">✕</button><div class="zari"></div><div class="in" id="dlgBody"></div></dialog>
-
-<div class="zari"></div>
-
-<!-- JOURNEY -->
-<section id="journey">
-  <div class="wrap">
-    <div class="reveal">
-      <div class="eyebrow">பயணம் · the journey</div>
-      <h2 class="sec-title">Climbing the gopuram</h2>
-      <p class="sec-sub">Built from the ground up, VIT at the base and the newest chapter at the top. Tap a tier.</p>
-    </div>
-    <div class="gopuram-wrap">
-      <div class="gopuram reveal" id="gopuram">
-        <div class="kalasam">
-          <svg viewBox="0 0 20 40"><path d="M10 0 L11 8 Q18 14 16 24 Q10 30 4 24 Q2 14 9 8Z M3 28 H17 V33 H3Z" fill="#C9A227"/></svg>
-          <svg viewBox="0 0 20 40"><path d="M10 0 L11 8 Q18 14 16 24 Q10 30 4 24 Q2 14 9 8Z M3 28 H17 V33 H3Z" fill="#C9A227"/></svg>
-          <svg viewBox="0 0 20 40"><path d="M10 0 L11 8 Q18 14 16 24 Q10 30 4 24 Q2 14 9 8Z M3 28 H17 V33 H3Z" fill="#C9A227"/></svg>
-        </div>
-      </div>
-      <div class="detail reveal" id="detail"></div>
-    </div>
-  </div>
-</section>
-
-<div class="zari"></div>
-
-<!-- FUN -->
-<section id="fun">
-  <div class="wrap">
-    <div class="reveal">
-      <div class="eyebrow">பொழுதுபோக்குகள் · off the clock</div>
-      <h2 class="sec-title">Dance, cook, journal</h2>
-      <p class="sec-sub">Three things I do when I'm not training models. Have a go at each.</p>
-    </div>
-    <div class="hob-grid">
-      <!-- dance -->
-      <div class="hob reveal">
-        <h3>💃 Dance</h3>
-        <div class="sub">Keep <b>Adi tala</b>, the 8-beat cycle (clap, 3 finger counts, clap-wave, clap-wave), and mini-me dances along.</div>
-        <svg id="dancer" viewBox="0 0 120 190">
-          <g class="body" id="dBody">
-            <circle cx="52.3" cy="27.6" r="7.8" fill="#22160F"/><circle cx="59.8" cy="25.5" r="7.9" fill="#22160F"/><circle cx="66.9" cy="25.2" r="7.6" fill="#22160F"/><circle cx="45.6" cy="33.7" r="7.4" fill="#22160F"/><circle cx="51.0" cy="30.2" r="7.8" fill="#22160F"/><circle cx="58.5" cy="33.1" r="6.1" fill="#22160F"/><circle cx="65.8" cy="31.5" r="7.3" fill="#22160F"/><circle cx="74.8" cy="32.0" r="6.9" fill="#22160F"/><circle cx="38.3" cy="39.9" r="7.2" fill="#22160F"/><circle cx="46.4" cy="39.1" r="6.8" fill="#22160F"/><circle cx="50.3" cy="38.1" r="6.0" fill="#22160F"/><circle cx="59.1" cy="37.4" r="6.7" fill="#22160F"/><circle cx="64.8" cy="38.8" r="6.5" fill="#22160F"/><circle cx="72.9" cy="36.3" r="6.7" fill="#22160F"/><circle cx="80.2" cy="39.9" r="6.9" fill="#22160F"/><circle cx="39.7" cy="42.3" r="6.8" fill="#22160F"/><circle cx="46.8" cy="42.1" r="5.8" fill="#22160F"/><circle cx="53.5" cy="45.8" r="5.6" fill="#22160F"/><circle cx="57.1" cy="45.3" r="7.2" fill="#22160F"/><circle cx="66.1" cy="44.3" r="7.4" fill="#22160F"/><circle cx="74.2" cy="42.0" r="5.7" fill="#22160F"/><circle cx="81.2" cy="45.9" r="7.6" fill="#22160F"/><circle cx="37.9" cy="51.1" r="6.3" fill="#22160F"/><circle cx="44.0" cy="50.6" r="6.2" fill="#22160F"/><circle cx="52.1" cy="49.0" r="7.7" fill="#22160F"/><circle cx="57.7" cy="48.9" r="6.3" fill="#22160F"/><circle cx="65.3" cy="50.9" r="7.2" fill="#22160F"/><circle cx="74.2" cy="50.2" r="5.7" fill="#22160F"/><circle cx="81.1" cy="49.0" r="6.0" fill="#22160F"/><circle cx="86.7" cy="52.0" r="6.4" fill="#22160F"/><circle cx="39.3" cy="54.1" r="6.7" fill="#22160F"/><circle cx="44.5" cy="54.3" r="7.8" fill="#22160F"/><circle cx="50.6" cy="54.8" r="7.7" fill="#22160F"/><circle cx="60.8" cy="57.7" r="6.4" fill="#22160F"/><circle cx="67.7" cy="54.6" r="7.3" fill="#22160F"/><circle cx="74.8" cy="54.8" r="5.8" fill="#22160F"/><circle cx="80.7" cy="57.5" r="7.3" fill="#22160F"/><circle cx="31.2" cy="62.3" r="7.4" fill="#22160F"/><circle cx="38.1" cy="63.8" r="5.7" fill="#22160F"/><circle cx="43.9" cy="60.3" r="6.3" fill="#22160F"/><circle cx="53.0" cy="63.7" r="6.8" fill="#22160F"/><circle cx="57.6" cy="61.3" r="6.9" fill="#22160F"/><circle cx="65.2" cy="63.2" r="7.9" fill="#22160F"/><circle cx="72.8" cy="62.4" r="7.6" fill="#22160F"/><circle cx="79.9" cy="60.8" r="7.9" fill="#22160F"/><circle cx="30.9" cy="66.7" r="5.5" fill="#22160F"/><circle cx="37.2" cy="66.2" r="6.2" fill="#22160F"/><circle cx="45.5" cy="67.5" r="6.7" fill="#22160F"/><circle cx="52.5" cy="67.3" r="6.4" fill="#22160F"/><circle cx="60.5" cy="68.3" r="6.5" fill="#22160F"/><circle cx="66.2" cy="67.8" r="6.3" fill="#22160F"/><circle cx="74.7" cy="66.9" r="7.8" fill="#22160F"/><circle cx="81.4" cy="69.5" r="5.9" fill="#22160F"/><circle cx="87.0" cy="69.9" r="6.2" fill="#22160F"/><circle cx="32.7" cy="74.1" r="6.4" fill="#22160F"/><circle cx="36.0" cy="74.0" r="6.2" fill="#22160F"/><circle cx="45.3" cy="74.5" r="6.7" fill="#22160F"/><circle cx="50.4" cy="74.0" r="6.7" fill="#22160F"/><circle cx="59.6" cy="75.9" r="6.2" fill="#22160F"/><circle cx="65.8" cy="72.3" r="7.5" fill="#22160F"/><circle cx="71.9" cy="75.3" r="7.5" fill="#22160F"/><circle cx="79.0" cy="75.6" r="6.8" fill="#22160F"/><circle cx="86.7" cy="74.2" r="7.9" fill="#22160F"/><circle cx="25.9" cy="81.7" r="7.2" fill="#22160F"/><circle cx="32.2" cy="80.8" r="7.5" fill="#22160F"/><circle cx="39.2" cy="78.7" r="7.5" fill="#22160F"/><circle cx="44.2" cy="79.0" r="7.8" fill="#22160F"/><circle cx="50.1" cy="80.0" r="6.4" fill="#22160F"/><circle cx="60.2" cy="80.4" r="7.8" fill="#22160F"/><circle cx="67.7" cy="80.6" r="5.7" fill="#22160F"/><circle cx="73.7" cy="78.4" r="8.0" fill="#22160F"/><circle cx="81.5" cy="79.2" r="6.0" fill="#22160F"/><circle cx="87.8" cy="81.0" r="8.0" fill="#22160F"/><circle cx="94.5" cy="78.5" r="7.3" fill="#22160F"/><circle cx="24.0" cy="85.5" r="6.4" fill="#22160F"/><circle cx="29.1" cy="84.6" r="7.5" fill="#22160F"/><circle cx="36.9" cy="86.6" r="7.4" fill="#22160F"/><circle cx="45.8" cy="86.1" r="6.3" fill="#22160F"/><circle cx="51.1" cy="84.7" r="7.1" fill="#22160F"/><circle cx="59.7" cy="87.8" r="6.3" fill="#22160F"/><circle cx="67.7" cy="87.6" r="6.2" fill="#22160F"/><circle cx="74.8" cy="86.5" r="7.9" fill="#22160F"/><circle cx="81.1" cy="85.3" r="6.2" fill="#22160F"/><circle cx="87.1" cy="86.0" r="5.6" fill="#22160F"/><circle cx="95.5" cy="86.1" r="6.7" fill="#22160F"/><circle cx="23.4" cy="92.1" r="7.9" fill="#22160F"/><circle cx="31.6" cy="91.7" r="6.5" fill="#22160F"/><circle cx="36.9" cy="91.9" r="7.9" fill="#22160F"/><circle cx="43.5" cy="91.7" r="7.2" fill="#22160F"/><circle cx="53.0" cy="92.2" r="7.1" fill="#22160F"/><circle cx="60.8" cy="93.6" r="6.1" fill="#22160F"/><circle cx="66.2" cy="94.0" r="6.8" fill="#22160F"/><circle cx="71.8" cy="93.1" r="5.6" fill="#22160F"/><circle cx="78.6" cy="92.2" r="6.2" fill="#22160F"/><circle cx="87.9" cy="92.9" r="6.3" fill="#22160F"/><circle cx="95.1" cy="92.6" r="7.3" fill="#22160F"/><circle cx="23.1" cy="98.8" r="6.6" fill="#22160F"/><circle cx="29.5" cy="97.7" r="6.9" fill="#22160F"/><circle cx="39.0" cy="97.6" r="7.1" fill="#22160F"/><circle cx="45.7" cy="98.5" r="5.6" fill="#22160F"/><circle cx="52.8" cy="96.5" r="5.6" fill="#22160F"/><circle cx="58.9" cy="96.1" r="5.7" fill="#22160F"/><circle cx="65.6" cy="97.9" r="5.8" fill="#22160F"/><circle cx="74.8" cy="99.4" r="6.7" fill="#22160F"/><circle cx="80.4" cy="97.3" r="8.0" fill="#22160F"/><circle cx="85.5" cy="97.2" r="6.1" fill="#22160F"/><circle cx="95.5" cy="98.0" r="6.5" fill="#22160F"/><circle cx="100.6" cy="99.5" r="6.1" fill="#22160F"/><circle cx="23.3" cy="104.5" r="6.5" fill="#22160F"/><circle cx="30.2" cy="105.1" r="6.6" fill="#22160F"/><circle cx="44.8" cy="103.5" r="7.7" fill="#22160F"/><circle cx="53.9" cy="105.1" r="6.5" fill="#22160F"/><circle cx="59.7" cy="105.0" r="6.2" fill="#22160F"/><circle cx="79.7" cy="104.6" r="6.1" fill="#22160F"/><circle cx="88.1" cy="104.2" r="7.9" fill="#22160F"/><circle cx="99.1" cy="103.7" r="7.4" fill="#22160F"/>
-            <path d="M38 150 L44 92 Q60 84 76 92 L82 150Z" fill="#5E1F33"/>
-            <path d="M40 150 L80 150 L88 176 L32 176Z" fill="#2E5C8A"/>
-            <g class="arm" id="armL" style="transform-origin:46px 98px"><path d="M46 98 L22 112" stroke="#5E1F33" stroke-width="9" stroke-linecap="round"/><circle cx="20" cy="113" r="5" fill="#EDC3A0"/></g>
-            <g class="arm" id="armR" style="transform-origin:74px 98px"><path d="M74 98 L98 112" stroke="#5E1F33" stroke-width="9" stroke-linecap="round"/><circle cx="100" cy="113" r="5" fill="#EDC3A0"/></g>
-            <rect x="54" y="72" width="12" height="16" fill="#D9A27E"/>
-            <ellipse cx="60" cy="53" rx="21" ry="21" fill="#EDC3A0"/><circle cx="49" cy="61" r="4" fill="#F28B8B" opacity=".45"/><circle cx="71" cy="61" r="4" fill="#F28B8B" opacity=".45"/><circle cx="40.3" cy="42.8" r="5.5" fill="#22160F"/><circle cx="43.9" cy="36.5" r="5.5" fill="#22160F"/><circle cx="49.5" cy="31.8" r="5.5" fill="#22160F"/><circle cx="56.4" cy="29.3" r="5.5" fill="#22160F"/><circle cx="63.6" cy="29.3" r="5.5" fill="#22160F"/><circle cx="70.0" cy="31.0" r="5.0" fill="#22160F"/><circle cx="77.0" cy="36.0" r="5.0" fill="#22160F"/><rect x="45" y="47" width="13" height="9" rx="4" fill="#141414"/><rect x="62" y="47" width="13" height="9" rx="4" fill="#141414"/>
-            <path d="M53 63 Q60 69 67 63" stroke="#5A1A22" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-          </g>
-        </svg>
-        <div class="beats" id="beats"></div>
-        <div class="ctrl">
-          <button id="talaBtn">▶ Play</button>
-          <button class="alt" id="droneBtn">♫ Drone: off</button>
-          <label>Tempo <input type="range" id="tempo" min="50" max="140" value="84"></label>
-        </div>
-      </div>
-      <!-- cooking -->
-      <div class="hob reveal">
-        <h3>🫓 Cooking</h3>
-        <div class="sub">Dosa is my favorite thing to make (and eat). <b>Swirl</b> on the tawa to spread the batter, wait for golden, then hit <b>Fold!</b> before it burns.</div>
-        <svg class="tawa" viewBox="0 0 220 200" id="dosa" aria-label="Dosa tawa, drag in circles to spread batter">
-          <path d="M188 100 L216 92" stroke="#5A3A22" stroke-width="11" stroke-linecap="round"/>
-          <circle cx="105" cy="100" r="86" fill="#2A2522" stroke="#3B3430" stroke-width="6"/>
-          <circle cx="105" cy="100" r="78" fill="#1F1B19"/>
-          <circle id="batter" cx="105" cy="100" r="0" fill="#F4EAD2"/>
-          <path id="folded" d="M33 104 A72 72 0 0 1 177 104 Z" fill="#E3A018" opacity="0"/>
-          <g id="sizzle"></g>
-        </svg>
-        <div class="meter"><i id="meter"></i></div>
-        <div class="msg" id="dosaMsg">Swirl on the tawa to spread the batter ↻</div>
-        <button id="fold" disabled>Fold it! 🫓</button>
-        <div class="tiny" id="cups"></div>
-      </div>
-      <!-- journaling -->
-      <div class="hob reveal">
-        <h3>📓 Journaling</h3>
-        <div class="sub">One prompt a day keeps the overthinking away. Pick a prompt and write a line.</div>
-        <button class="newprompt" id="newPrompt">✎ new prompt</button>
-        <div class="journal" id="journal"></div>
-        <div class="jrow"><input id="jIn" placeholder="write one line…" maxlength="120"><button id="jBtn">ink it</button></div>
-        <div class="tiny">🔒 Your lines stay in your own browser. Nothing gets sent anywhere.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact">
-  <div class="wrap">
-    <div class="contact reveal">
-      <svg class="kolam-bg" id="kolam2" viewBox="0 0 10 10"></svg>
-      <div class="eyebrow">பேசலாம் · let's talk</div>
-      <h2>Let's talk over a masala dosa</h2>
-      <p style="color:var(--muted);max-width:520px;margin:0 auto">I'm graduating in 2027 and looking for new-grad SWE, AI and ML roles. Happy to talk about AI agents, ML, system design, or where to find a crispy dosa in Tempe.</p>
-      <div class="btns">
-        <button class="btn primary" id="copyMail">✉ Copy my email</button>
-        <a class="btn ghost" href="https://www.linkedin.com/in/harshini-bv-551019220" target="_blank" rel="noopener">LinkedIn ↗</a>
-        <a class="btn ghost" href="https://github.com/Harshbv" target="_blank" rel="noopener">GitHub ↗</a>
-        <a class="btn ghost" href="cv/Harshini_BV_CV.pdf" target="_blank" rel="noopener">📄 CV ↗</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="zari thick"></div>
-<footer>Made with kolam math ✦ reveals timed to Adi tala ✦ psst… type <b>dosa</b> anywhere ✦ © 2026 Harshini BV</footer>
-<div id="toast"></div>
 
 <script>
-const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
-const toast=(t)=>{const el=$('#toast');el.textContent=t;el.classList.add('show');clearTimeout(toast.t);toast.t=setTimeout(()=>el.classList.remove('show'),2200)};
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
 
-/* ---------- lamp / night mode ---------- */
-if(localStorage.night==='1')document.body.classList.add('night');
-$('#lamp').onclick=e=>{e.stopPropagation();const n=document.body.classList.toggle('night');localStorage.night=n?'1':'0';toast(n?'🪔 Lamp lit. Night mode on':'☀️ Good morning!')};
-
-/* ---------- typed tagline ---------- */
-const lines=["I build LLM agents that show their work.","I teach U-Nets to spot missing forest. 🌳","I run on dosa + gradient descent. 🫓","MS CS @ ASU · new-grad 2027 ✦"];
-(function type(i=0,j=0,del=false){const el=$('#typed');const L=lines[i];
-  el.textContent=L.slice(0,j);
-  if(!del&&j===L.length)return setTimeout(()=>type(i,j,true),1800);
-  if(del&&j===0)return setTimeout(()=>type((i+1)%lines.length,0,false),300);
-  setTimeout(()=>type(i,j+(del?-1:1),del),del?25:55)})();
-
-/* ---------- generative kolam (symmetric Truchet arcs around a dot grid) ---------- */
-function kolam(svg,n=8,s=40,animate=true){
-  const N=n*s,h=s/2,half=n/2,c=N/2;
-  const q=[...Array(half)].map(()=>Array(half).fill(0));
-  for(let i=0;i<half;i++)for(let j=0;j<=i;j++)q[i][j]=q[j][i]=Math.random()<.5?0:1;
-  const A=(x1,y1,x2,y2,sw)=>`M${x1} ${y1}A${h} ${h} 0 0 ${sw} ${x2} ${y2}`;
-  const P=[];
-  for(let r=0;r<n;r++)for(let k=0;k<n;k++){
-    const qi=r<half?r:n-1-r, qj=k<half?k:n-1-k;
-    const t=q[qi][qj]^((r>=half)!==(k>=half)?1:0), x=k*s,y=r*s;
-    if(t===0){P.push(A(x+h,y,x,y+h,1),A(x+h,y+s,x+s,y+h,1))}
-    else{P.push(A(x+h,y,x+s,y+h,0),A(x+h,y+s,x,y+h,0))}
-  }
-  for(let k=0;k<half;k++){const a=2*k*s+h,b=(2*k+1)*s+h;
-    P.push(A(a,0,b,0,1),A(a,N,b,N,0),A(0,a,0,b,0),A(N,a,N,b,1));}
-  const R=(c+h)*1.45;
-  svg.setAttribute('viewBox',`${c-R} ${c-R} ${2*R} ${2*R}`);
-  let html=`<g transform="rotate(45 ${c} ${c})">`;
-  for(let r=0;r<n;r++)for(let k=0;k<n;k++)html+=`<circle cx="${k*s+h}" cy="${r*s+h}" r="3" style="animation-delay:${(Math.hypot(k*s+h-c,r*s+h-c))*3}ms"/>`;
-  P.forEach(d=>html+=`<path d="${d}"/>`);
-  svg.innerHTML=html+'</g>';
-  if(!animate)return;
-  svg.querySelectorAll('path').forEach(p=>{
-    const L=p.getTotalLength(),m=p.getPointAtLength(0);
-    p.style.strokeDasharray=L;p.style.strokeDashoffset=L;
-    const d=400+Math.hypot(m.x-c,m.y-c)*7;
-    requestAnimationFrame(()=>requestAnimationFrame(()=>{p.style.transition=`stroke-dashoffset .9s ease ${d}ms`;p.style.strokeDashoffset=0}));
-  });
+/* today's date, in the visitor's own time zone, every visit (rolls over at midnight) */
+function stampDate(){
+  const now=new Date();
+  $('#today').textContent=now.toLocaleDateString('en-US',{weekday:'long',year:'numeric',month:'long',day:'numeric'});
+  const dayOfYear=Math.floor((now-new Date(now.getFullYear(),0,0))/864e5);
+  $('#issue').textContent=`Vol. MMXXVII · No. ${dayOfYear}`;
+  $('#yr').textContent=now.getFullYear();
+  const next=new Date(now.getFullYear(),now.getMonth(),now.getDate()+1,0,0,5);
+  setTimeout(stampDate,next-now);
 }
-kolam($('#kolam'));kolam($('#kolam2'),6,40,false);kolam($('#kolamBig'),12,40);
+stampDate();
 
-/* ---------- rangoli powder cursor trail ---------- */
-(()=>{if(matchMedia('(pointer:coarse)').matches||matchMedia('(prefers-reduced-motion:reduce)').matches)return;
-  const cv=document.createElement('canvas');cv.id='trail';document.body.appendChild(cv);const g=cv.getContext('2d');
-  const dpr=devicePixelRatio||1;let W,H;const size=()=>{W=cv.width=innerWidth*dpr;H=cv.height=innerHeight*dpr};size();addEventListener('resize',size);
-  const cols=['#E0457B','#F28C28','#E6BE45','#2F9E5B','#1D8FB0','#FFFFFF','#B23A7A','#7B3FB0'];
-  let ps=[],lx=0,ly=0,run=false;
-  addEventListener('mousemove',e=>{const d=Math.hypot(e.clientX-lx,e.clientY-ly);if(d<5)return;lx=e.clientX;ly=e.clientY;
-    const n=Math.min(7,1+(d/9|0));
-    for(let i=0;i<n;i++){const petal=Math.random()<.07;
-      ps.push({x:e.clientX+(Math.random()-.5)*12,y:e.clientY+(Math.random()-.5)*12,vx:(Math.random()-.5)*.9,vy:Math.random()*.5+.15,
-        r:Math.random()*2.6+1.1,c:petal?(Math.random()<.5?'#F28C28':'#F7B733'):cols[Math.random()*cols.length|0],l:1,petal,rot:Math.random()*6})}
-    if(ps.length>450)ps.splice(0,ps.length-450);if(!run){run=true;requestAnimationFrame(loop)}});
-  function loop(){g.clearRect(0,0,W,H);ps=ps.filter(p=>(p.l-=.017)>0);
-    for(const p of ps){p.x+=p.vx;p.y+=p.vy;p.vy+=.018;g.globalAlpha=Math.min(1,p.l*1.3);g.fillStyle=p.c;g.beginPath();
-      if(p.petal){p.rot+=.06;g.ellipse(p.x*dpr,p.y*dpr,6*dpr,3*dpr,p.rot,0,7)}
-      else g.arc(p.x*dpr,p.y*dpr,p.r*dpr*(.55+p.l*.45),0,7);
-      g.fill()}
-    g.globalAlpha=1;if(ps.length)requestAnimationFrame(loop);else{run=false;g.clearRect(0,0,W,H)}}
-})();
-$('#newKolam').onclick=e=>{e.stopPropagation();kolam($('#kolam'));toast('✦ fresh kolam, drawn just for you')};
+/* "Continued on C1" jumps: scroll to the story and mark it briefly */
+$$('a.jump[href^="#"]').forEach(a=>a.addEventListener('click',()=>{
+  const t=document.querySelector(a.getAttribute('href'));
+  if(t&&t.classList.contains('story')){t.classList.add('flash');setTimeout(()=>t.classList.remove('flash'),1600)}
+}));
 
-/* ---------- avatar ---------- */
-const ring=$('#ring'),head=$('#head'),bubble=$('#bubble');
-const quips=["வணக்கம்! 👋","Dosa first, code later 🫓","Shades on = deploy mode 😎","Ask me about RAG memory 🧠","Seri seri, scroll down 👇","I count Adi tala in my sleep 💃","Certified dosa girlie 🫓","0.91 IoU. Not that I'm counting."];
-let qi=0;
-document.addEventListener('mousemove',e=>{
-  const r=ring.getBoundingClientRect(),dx=(e.clientX-(r.left+r.width/2))/innerWidth,dy=(e.clientY-(r.top+r.height/2))/innerHeight;
-  head.style.transform=`rotate(${dx*10}deg)`;
-  $$('.pupil').forEach(p=>p.style.transform=`translate(${dx*8}px,${dy*6}px)`);
-});
-ring.addEventListener('click',e=>{
-  e.stopPropagation();ring.classList.add('peek');
-  bubble.textContent=quips[qi++%quips.length];bubble.classList.add('show');
-  $('#eyeR').classList.add('wink');setTimeout(()=>$('#eyeR').classList.remove('wink'),350);
-  clearTimeout(ring.t);ring.t=setTimeout(()=>{bubble.classList.remove('show');ring.classList.remove('peek')},2600);
-  burst(e.clientX,e.clientY,10);
-});
-setTimeout(()=>{bubble.classList.add('show');setTimeout(()=>bubble.classList.remove('show'),2500)},1600);
+$('#copyMail').addEventListener('click',()=>navigator.clipboard.writeText('harshinibv17@gmail.com').then(()=>{$('#copyLbl').textContent='Copied';setTimeout(()=>$('#copyLbl').textContent='Copy',1800)}));
 
-/* ---------- marquee ---------- */
-const skills=["Python","PyTorch","TensorFlow","LangChain","RAG","LLM Agents","Next.js","TypeScript","OpenCV","Faster R-CNN","U-Net","Sentinel-2","Streamlit","Groq","Time-series","Express.js"];
-$('#track').innerHTML=[...skills,...skills].map(s=>`<span>${s}</span>`).join('');
-
-/* ---------- projects ---------- */
-const projects=[
- {t:"Where Did the Forest Go?",gh:"https://github.com/Harshbv/where-did-the-forest-go",y:"Oct 2026 · Personal",tags:["vision","data"],e:"🌳",sp:3,
-  one:"Taught a U-Net to find where the Amazon went missing. About 6,800 ha cleared in Rondônia since 2021.",
-  st:["PyTorch","U-Net","Sentinel-2","GeoPandas","Folium"],
-  b:["Sentinel-2 + U-Net pipeline mapping deforestation in Rondônia, Brazil: ~6,800 ha cleared 2021→2026 (95% CI 6,200–7,500 ha), checked with blind stratified validation on 600 hand-labelled points.","Tracked false alarms down to the training labels: a SWIR ablation didn't help, but switching from ESA WorldCover to MapBiomas labels took cleared-forest precision from 59% to 88% (92% overall accuracy).","End-to-end data pipeline: STAC API, cloud masking, dry-season median composites, cross-year radiometric normalization → analysis-ready 10 m composites.","Trained from scratch on a Kaggle GPU with a spatially held-out split: 0.91 test IoU vs 0.85 for an NDVI baseline. Results published as an interactive Folium map."]},
- {t:"Controlled Persistent Memory",gh:"https://github.com/Harshbv/controlled_persistent_memory",y:"2026 · Research, ASU CSE572",tags:["llm"],e:"🧠",sp:3,
-  one:"Gave long-running LLM assistants a memory that knows what to forget. Co-authored the paper.",
-  st:["RAG","BM25","Dense retrieval","LLM eval"],
-  b:["Co-authored a paper proposing a controlled memory architecture (write router, versioning, multi-signal retrieval) to cut noisy and outdated-preference recall.","Evaluated 3 memory variants across 588 episodes of PersonaMem v1 (32k): best variant hit 66% accuracy while storing ~60% fewer memories than vanilla RAG.","Implemented dedup/versioning and fused dense, BM25, option-conditioned and temporal retrieval signals."]},
- {t:"DispatchIQ",gh:"https://github.com/Harshbv/Globehacks",y:"GlobeHack S1 · Trucker Path track",tags:["llm","web"],e:"🚚",sp:3,
-  one:"Hackathon build: an AI dispatcher for truck fleets. Billing went from 45 minutes to 90 seconds.",
-  st:["Next.js","TypeScript","Groq LLM","Google Maps","Twilio"],
-  b:["Groq LLM (llama-3.3-70b) + Trucker Path NavPro API to score and recommend drivers by HOS, GPS proximity, cost/mile and safety, with the reasoning shown for each pick.","Custom dynamic-programming knapsack for load/route optimization under weight and Hours-of-Service limits.","Automated FMCSA pre-dispatch compliance checks and live alerts (fuel, HOS, weather, route deviation) across 8 API routes. Unsafe dispatches get blocked and Twilio sends an SMS.","Groq Vision OCR pipeline for BOL/POD/receipts auto-generates invoices: 45 min → 90 s."]},
- {t:"Clickless",gh:"https://github.com/Harshbv/clickless",y:"Fall 2025 · ASU group project",tags:["llm"],e:"🎧",sp:2,
-  one:"Shop for headphones just by talking. 3 agents, 25–30 GB of Amazon data, 92% precision@50.",
-  st:["Python","Streamlit","OpenAI API","LLM Agents"],
-  b:["Planner → Retriever/Ranker → Explainer: a 3-agent conversational recommender that replaces filter menus with natural language.","Processed 25–30 GB of Amazon metadata + reviews into a query-efficient index: 92% precision@50, 93% budget-extraction accuracy.","Deterministic rule-based ranking + LLM intent parsing, so the recommendations can't be hallucinated, with multi-turn refinement."]},
- {t:"Displaced Voices",y:"2025 · ASU team project",tags:["data"],e:"🏠",sp:2,
-  one:"Data science for housing justice: forecast 54,143 Arizona evictions for 2025 so help can arrive earlier.",
-  st:["Python","Time-series","Regression"],
-  b:["Part of a 5-person predictive-modeling track forecasting Arizona eviction filings: 54,143 projected for 2025, a 16% jump over 2022.","Analyzed 3 years of Maricopa County records and found summer is consistently the highest-risk window.","Turned a regression model (single-female-parent household rate = top predictor) into a forecasting tool. Presented at ASU Library."]},
- {t:"Next-Gen Livestock Protection",y:"2024–25 · VIT Capstone",tags:["vision"],e:"🐄",sp:2,
-  one:"Farm cameras that count cattle and send an SMS the moment a predator shows up.",
-  st:["Faster R-CNN","OpenCV","GenAI preprocessing"],
-  b:["Real-time monitoring pipeline: Faster R-CNN + GenAI preprocessing to count cattle and detect predator intrusions.","5 modules (capture → preprocessing → counting → intrusion detection → alerts) with instant SMS/app alerts to farm owners.","Synthesized 15+ papers on CNN/RCNN animal detection to pick the architecture and augmentation strategy."]},
- {t:"LinkGenie",gh:"https://github.com/Harshbv/LinkedIn-Post-Generator",y:"Personal",tags:["llm"],e:"✍️",sp:1,
-  one:"A LinkedIn post generator that sounds like a human, not a press release.",
-  st:["Python","Streamlit","LangChain","Groq"],
-  b:["Few-shot prompting over a curated dataset of real posts via LangChain + Groq.","Controls for tone (Professional / Casual / Motivational / Funny), length, language (English/Hinglish) and audience.","Tag-based few-shot retrieval for realism. Copy/download output, one-command deploy."]},
- {t:"MeloLearn",gh:"https://github.com/Harshbv/MeloLearn",y:"2024 · VIT course project",tags:["web"],e:"🎵",sp:1,
-  one:"A music-learning platform where you remix tracks and climb a Top-10 leaderboard.",
-  st:["HTML/CSS/JS","Bootstrap","Express.js"],
-  b:["Full-stack platform to learn, remix and rank original compositions.","Ranking system scoring originality, creativity and technical skill → live Top-10 leaderboard.","In-browser audio tools (trim, reverse, speed) and a Slick.js carousel for browsing."]},
-];
-$('#grid').innerHTML=projects.map((p,i)=>`
- <article class="card reveal" data-i="${i}" data-tags="${p.tags.join(' ')}" style="transition-delay:${(i%3)*120}ms">
-   <div class="spice" title="brain-melt level">${'🌶'.repeat(p.sp)}</div>
-   <div class="emo">${p.e}</div><h3>${p.t}</h3><div class="meta">${p.y}</div>
-   <p>${p.one}</p><div class="stack">${p.st.map(s=>`<span>${s}</span>`).join('')}</div>
-   <span class="more">read the story →</span>
- </article>`).join('');
-$$('.card').forEach(c=>c.onclick=e=>{e.stopPropagation();const p=projects[c.dataset.i];
-  $('#dlgBody').innerHTML=`<div style="font-size:40px">${p.e}</div><div class="meta" style="color:var(--peacock);font-weight:600">${p.y} · ${'🌶'.repeat(p.sp)}</div><h3>${p.t}</h3><p style="color:var(--muted)">${p.one}</p><ul>${p.b.map(x=>`<li>${x}</li>`).join('')}</ul><div class="stack" style="margin-top:16px">${p.st.map(s=>`<span>${s}</span>`).join('')}</div>
-    <div style="margin-top:22px">${p.gh?`<a class="btn primary gh" href="${p.gh}" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38v-1.34c-2.23.48-2.7-1.07-2.7-1.07-.36-.92-.89-1.17-.89-1.17-.73-.5.06-.49.06-.49.8.06 1.23.83 1.23.83.72 1.22 1.88.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.65-.89-3.65-3.95 0-.87.31-1.59.83-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.6 7.6 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48v2.2c0 .21.15.46.55.38A8 8 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg> View on GitHub ↗</a>`:`<span class="btn ghost" style="opacity:.6;cursor:default">🔒 Repo not public yet</span>`}</div>`;
-  $('#dlg').showModal();});
-$('#dlg').addEventListener('click',e=>{if(e.target.id==='dlg')$('#dlg').close()});
-$$('#filters .chip').forEach(b=>b.onclick=e=>{e.stopPropagation();
-  $$('#filters .chip').forEach(x=>x.classList.toggle('on',x===b));
-  $$('.card').forEach(c=>c.classList.toggle('hide',b.dataset.f!=='all'&&!c.dataset.tags.includes(b.dataset.f)))});
-
-/* ---------- gopuram ---------- */
-const exp=[
- {t:"Software Engineer Intern",o:"Optiwise · AgriChoice",d:"Jun – Aug 2026 · Remote",e:"💼",
-  n:"Shipped production features for AgriChoice, a farm-equipment rental marketplace. The top of the tower (for now).",
-  k:["TypeScript","Node.js","Fastify","Prisma","PostgreSQL/PostGIS","Kotlin","Jetpack Compose","Fly.io"],
-  b:["Built a rental-extension billing feature end to end across 4 TypeScript/Fastify production services and a Kotlin/Jetpack Compose Android app. It included GST-compliant documents in 4 languages and regenerating 684 stored records.",
-     "Worked on a 4-service microservices backend (identity/auth, catalog & bookings, payments/escrow, background worker) with ~2,400 passing automated tests and async event-driven messaging via pg-boss.",
-     "Removed double-booking risk across a 13-state booking state machine using optimistic concurrency control, partial-unique-index constraints and shared Zod DTO contracts.",
-     "Built a cursor-paginated admin REST API with bulk account moderation and audit logging.",
-     "Tracked down 3 stacked production bugs and 5 client–server API contract mismatches the test suite had missed. Ran a 20-scenario manual test pass across 4 user roles and pushed 42 commits of fixes through code review.",
-     "Deployed all 4 services to Fly.io staging and validated the Android app end to end through its offline-first booking queue."]},
- {t:"Graduate Service Assistant",o:"Arizona State University · School of ECEE",d:"May 2026 – present · Tempe, AZ",e:"🌵",
-  n:"Grading for the Random Signals course alongside my MS.",k:["Grading","Technical feedback"],
-  b:["Evaluate coursework for four sections of the Random Signals curriculum using structured rubrics.","Give targeted technical feedback that helps students close conceptual gaps."]},
- {t:"MS Computer Science",o:"Arizona State University",d:"Aug 2025 – present · Tempe, AZ",e:"🎓",
-  n:"Moved to the desert for grad school and started building things right away.",k:["MS CS","AI / ML","Research"],
-  b:["Coursework includes knowledge representation and multimedia & web databases.","Co-authored a research paper on controlled persistent memory for long-horizon LLM assistants (CSE 572).","Built Clickless, a 3-agent conversational shopping assistant, as a group project.","Presented <i>Displaced Voices</i> (data science for housing justice) at the ASU Library."]},
- {t:"ML Intern",o:"Interlace India",d:"Aug – Sep 2023 · Siruseri (on-site)",e:"🤖",
-  n:"My first ML internship: classification on real, messy data.",k:["Python","Machine Learning","Data Classification"],
-  b:["Built a real-time email-classification pipeline in Python.","Handled class imbalance with keyword weighting and threshold tuning to reduce false negatives.","Shared findings with stakeholders."]},
- {t:"BTech Computer Science",o:"Vellore Institute of Technology",d:"2021 – 2025 · CGPA 9.17",e:"🏛️",
-  n:"The foundation every gopuram needs. This is where it all started, including my first publication.",k:["BTech CS","CGPA 9.17","Cybersecurity","Computer Vision"],
-  b:["📄 <b>Published at ICSTSN 2024:</b> <i>OTP Verification & Zero Trust Security for RBAC in Medical Records</i>. It proposes a Zero Trust architecture (OTP + role-based access, bcrypt/Argon2 hashing, JWT sessions, AES/SHA-256 signed audit logs) for HIPAA-aligned hospital records. Cited in later Zero Trust research.",
-     "Capstone: Next-Gen Livestock Protection, a Faster R-CNN system that counts cattle and sends alerts when predators show up.",
-     "Built MeloLearn, a full-stack music-learning platform, as a course project.",
-     "Technical team member at IEEE Women in Engineering, and on the finance team at NexSeed Club."]},
-];
-const widths=[46,58,70,84,100];
-const gp=$('#gopuram');
-exp.forEach((x,i)=>{const b=document.createElement('button');b.className='tier';b.style.width=widths[i]+'%';
-  b.innerHTML=`${x.e} ${x.t}<small>${x.o}</small>`;b.onclick=e=>{e.stopPropagation();showExp(i);openExp(i)};gp.appendChild(b)});
-function openExp(i){const x=exp[i];
-  $('#dlgBody').innerHTML=`<div style="font-size:40px">${x.e}</div><div class="meta" style="color:var(--peacock);font-weight:600">${x.d}</div><h3>${x.t}</h3><div style="font-weight:600;color:var(--peacock)">${x.o}</div><p style="color:var(--muted);margin-top:8px">${x.n}</p><ul>${x.b.map(y=>`<li>${y}</li>`).join('')}</ul><div class="stack" style="margin-top:16px">${x.k.map(s=>`<span>${s}</span>`).join('')}</div>`;
-  $('#dlg').showModal()}
-/* build the gopuram stone by stone, bottom (VIT) to top (Optiwise), when it scrolls into view */
-gp.classList.add('pending');
-new IntersectionObserver((es,o)=>{if(!es[0].isIntersecting)return;o.disconnect();gp.classList.remove('pending');
-  const tiers=$$('.tier').reverse(),D=320;
-  tiers.forEach((t,k)=>t.animate([{opacity:0,transform:'translateY(-70px) scale(.9)'},{opacity:1,transform:'translateY(4px)',offset:.8},{opacity:1,transform:'none'}],
-    {duration:520,delay:k*D,easing:'cubic-bezier(.3,.7,.4,1)',fill:'backwards'}));
-  $('.kalasam').animate([{opacity:0,transform:'translateY(-40px)'},{opacity:1,transform:'none'}],{duration:500,delay:tiers.length*D,easing:'ease-out',fill:'backwards'});
-  setTimeout(()=>{showExp(0);toast('🛕 Gopuram complete!')},tiers.length*D+500);
-},{threshold:.35}).observe(gp);
-function showExp(i){const x=exp[i];$$('.tier').forEach((t,j)=>t.classList.toggle('on',i===j));
-  $('#detail').innerHTML=`<div class="swap"><div style="font-size:40px">${x.e}</div><h3>${x.t}</h3><div class="org">${x.o}</div><div class="when">${x.d}</div><p>${x.n}</p><div class="stack" style="margin-top:14px">${x.k.slice(0,4).map(s=>`<span>${s}</span>`).join('')}</div><button class="more" style="border:none;background:none;padding:0;cursor:pointer" onclick="event.stopPropagation();openExp(${i})">see the details →</button></div>`}
-showExp(0);
-
-/* ---------- reveal + counters (staggered on an 8-beat grid) ---------- */
-const io=new IntersectionObserver(es=>es.forEach(en=>{if(!en.isIntersecting)return;en.target.classList.add('in');
-  en.target.querySelectorAll('[data-count]').forEach(countUp);io.unobserve(en.target)}),{threshold:.15});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;e.target.classList.add('in');
+  e.target.querySelectorAll('.fill').forEach(f=>f.style.width=f.dataset.w+'%');io.unobserve(e.target)}),{threshold:.15});
 $$('.reveal').forEach(el=>io.observe(el));
-function countUp(el){const to=+el.dataset.count,dec=+(el.dataset.dec||0),t0=performance.now();
-  (function f(t){const k=Math.min(1,(t-t0)/1400),v=to*(1-Math.pow(1-k,3));el.textContent=v.toFixed(dec);if(k<1)requestAnimationFrame(f)})(t0)}
-addEventListener('scroll',()=>{$('#progress').style.width=(scrollY/(document.documentElement.scrollHeight-innerHeight)*100)+'%'});
-
-/* ---------- Adi tala + dancer ---------- */
-const talam=[["👏","clap"],["1","pinky"],["2","ring"],["3","middle"],["👏","clap"],["👋","wave"],["👏","clap"],["👋","wave"]];
-$('#beats').innerHTML=talam.map(b=>`<div class="beat" title="${b[1]}">${b[0]}</div>`).join('');
-let ac,timer=null,beat=0,drone=null;
-const ctx=()=>ac||(ac=new (window.AudioContext||window.webkitAudioContext)());
-function clap(){const a=ctx(),len=.09,buf=a.createBuffer(1,a.sampleRate*len,a.sampleRate),d=buf.getChannelData(0);
-  for(let i=0;i<d.length;i++)d[i]=(Math.random()*2-1)*Math.pow(1-i/d.length,3);
-  const s=a.createBufferSource(),f=a.createBiquadFilter(),g=a.createGain();f.type='bandpass';f.frequency.value=1400;g.gain.value=.9;
-  s.buffer=buf;s.connect(f).connect(g).connect(a.destination);s.start()}
-function tone(freq,dur=.08,vol=.18,type='sine'){const a=ctx(),o=a.createOscillator(),g=a.createGain();o.type=type;o.frequency.value=freq;
-  g.gain.setValueAtTime(vol,a.currentTime);g.gain.exponentialRampToValueAtTime(.001,a.currentTime+dur);o.connect(g).connect(a.destination);o.start();o.stop(a.currentTime+dur)}
-const poses=[[-50,50],[-120,10],[-10,120],[-140,140],[-50,50],[-90,30],[-30,90],[-150,150]];
-function tick(){const b=beat%8;$$('.beat').forEach((el,i)=>el.classList.toggle('hit',i===b));
-  const k=talam[b][1];if(k==='clap')clap();else if(k==='wave')tone(330,.14,.12,'triangle');else tone(880,.05,.12);
-  const [l,r]=poses[b];$('#armL').style.transform=`rotate(${-l}deg)`;$('#armR').style.transform=`rotate(${-r}deg)`;
-  $('#dBody').style.transform=`translateY(${b%2?-6:0}px) rotate(${b%2?(b%4===1?-4:4):0}deg)`;beat++}
-function startTala(){stopTala();const ms=60000/$('#tempo').value;tick();timer=setInterval(tick,ms)}
-function stopTala(){clearInterval(timer);timer=null}
-$('#talaBtn').onclick=e=>{e.stopPropagation();ctx().resume();if(timer){stopTala();e.target.textContent='▶ Play';$$('.beat').forEach(b=>b.classList.remove('hit'))}else{startTala();e.target.textContent='❚❚ Pause'}};
-$('#tempo').oninput=()=>{if(timer)startTala()};
-$('#droneBtn').onclick=e=>{e.stopPropagation();const a=ctx();a.resume();
-  if(drone){drone.forEach(o=>o.stop());drone=null;e.target.textContent='♫ Drone: off';return}
-  const g=a.createGain(),f=a.createBiquadFilter();f.type='lowpass';f.frequency.value=900;g.gain.value=.035;f.connect(g).connect(a.destination);
-  drone=[130.81,196,261.63,130.81*1.003].map(fr=>{const o=a.createOscillator();o.type='sawtooth';o.frequency.value=fr;o.connect(f);o.start();return o});
-  e.target.textContent='♫ Drone: on (Sa-Pa)'};
-
-/* ---------- dosa game ---------- */
-const dsvg=$('#dosa'),bat=$('#batter'),folded=$('#folded'),foldBtn=$('#fold'),dm=$('#dosaMsg'),dKey='dosaCount';
-let rad=0,done=0,phase='spread',last=null;
-const stops=[[244,234,210],[226,158,42],[140,72,22],[40,20,10]],P=[0,65,88,100];
-const lerp=(a,b,t)=>a.map((v,i)=>Math.round(v+(b[i]-v)*t));
-function col(d){d=Math.min(100,d);for(let i=0;i<3;i++)if(d<=P[i+1])return `rgb(${lerp(stops[i],stops[i+1],(d-P[i])/(P[i+1]-P[i]))})`;return `rgb(${stops[3]})`}
-const updCups=()=>$('#cups').textContent=`Perfect dosas made on this browser: ${localStorage[dKey]||0}`;updCups();
-function paint(){bat.setAttribute('r',rad);bat.setAttribute('fill',col(done));bat.setAttribute('stroke',col(done+20));bat.setAttribute('stroke-width',rad?3:0);
-  folded.setAttribute('fill',col(done));$('#meter').style.width=done+'%'}
-function sizzle(){if(Math.random()>.25)return;const a=Math.random()*Math.PI*2,d=Math.random()*rad*.9,c=document.createElementNS('http://www.w3.org/2000/svg','circle');
-  c.setAttribute('cx',105+Math.cos(a)*d);c.setAttribute('cy',100+Math.sin(a)*d);c.setAttribute('r',1.5+Math.random()*2);c.setAttribute('fill','rgba(255,255,255,.75)');
-  $('#sizzle').appendChild(c);c.animate([{opacity:1,transform:'translateY(0)'},{opacity:0,transform:'translateY(-6px)'}],{duration:600}).onfinish=()=>c.remove()}
-function reset(){rad=0;done=0;phase='spread';folded.setAttribute('opacity',0);bat.setAttribute('opacity',1);foldBtn.disabled=true;paint();dm.textContent='Swirl on the tawa to spread the batter ↻'}
-dsvg.addEventListener('click',e=>e.stopPropagation());
-dsvg.addEventListener('pointerdown',e=>{e.stopPropagation();if(phase==='end'){reset();return}if(phase!=='spread')return;last=[e.clientX,e.clientY];dsvg.setPointerCapture(e.pointerId);if(!rad){rad=8;paint()}});
-dsvg.addEventListener('pointermove',e=>{if(!last||phase!=='spread')return;const d=Math.hypot(e.clientX-last[0],e.clientY-last[1]);last=[e.clientX,e.clientY];
-  rad=Math.min(72,rad+d*.07);paint();dm.textContent=`Spreading… ${Math.round(rad/72*100)}%`;if(rad>=72)startCook()});
-['pointerup','pointercancel'].forEach(ev=>dsvg.addEventListener(ev,()=>last=null));
-function startCook(){phase='cook';last=null;foldBtn.disabled=false;dm.textContent='Sizzling… wait for golden 🔥';const t0=performance.now();
-  (function f(t){if(phase!=='cook')return;done=Math.min(100,Math.max(0,(t-t0)/90));paint();sizzle();
-    if(done>=100){phase='end';foldBtn.disabled=true;dm.textContent='Aiyo, burnt! 😭 Tap the tawa to try again';return}
-    if(done>60&&done<=80)dm.textContent='Golden! FOLD NOW ✨';else if(done>80)dm.textContent='Getting dark… hurry!';
-    requestAnimationFrame(f)})(t0)}
-foldBtn.onclick=e=>{e.stopPropagation();if(phase!=='cook')return;phase='end';foldBtn.disabled=true;bat.setAttribute('opacity',0);folded.setAttribute('opacity',1);
-  folded.animate([{transform:'scaleY(-1)'},{transform:'scaleY(1)'}],{duration:400,easing:'ease-out'});
-  if(done>60&&done<=80){dm.textContent='Perfect crispy dosa! 🫓✨ Pass the chutney';localStorage[dKey]=(+localStorage[dKey]||0)+1;updCups();
-    const r=dsvg.getBoundingClientRect();burst(r.left+r.width/2,r.top+r.height/2,14)}
-  else if(done<=60)dm.textContent='Bit pale and soft… 5/10. Tap the tawa for another';
-  else dm.textContent='Extra crispy, almost burnt 😅 Tap the tawa for another'};
-
-/* ---------- journal ---------- */
-const prompts=["Something small that made today good:","A bug that taught me something:","Smell that instantly takes me home:","What I'd tell myself from one year ago:","Song stuck in my head right now:","One thing I want to learn next:","Best dosa I ever had, and where:","Today I'm grateful for:"];
-let jp=Math.floor(Math.random()*prompts.length);
-const jKey='journalLines',jl=()=>JSON.parse(localStorage[jKey]||'[]');
-const esc=s=>s.replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-function renderJ(){$('#journal').innerHTML=`<div class="p">${prompts[jp]}</div>`+jl().map(x=>`<div class="entry">— ${esc(x)}</div>`).join('')}
-renderJ();
-$('#newPrompt').onclick=e=>{e.stopPropagation();jp=(jp+1)%prompts.length;renderJ()};
-function ink(e){e&&e.stopPropagation();const v=$('#jIn').value.trim();if(!v)return;const a=jl();a.push(v);localStorage[jKey]=JSON.stringify(a.slice(-12));$('#jIn').value='';renderJ();
-  $('#journal').scrollTop=1e6;toast('📓 inked!')}
-$('#jBtn').onclick=ink;$('#jIn').addEventListener('keydown',e=>{if(e.key==='Enter')ink()});
-$('#jIn').addEventListener('click',e=>e.stopPropagation());
-
-/* ---------- contact ---------- */
-$('#copyMail').onclick=e=>{e.stopPropagation();navigator.clipboard.writeText('harshinibv17@gmail.com').then(()=>toast('✉ Email copied: harshinibv17@gmail.com'),()=>toast('harshinibv17@gmail.com'))};
-
-/* ---------- jasmine petal bursts ---------- */
-function burst(x,y,n=8){for(let i=0;i<n;i++){const p=document.createElement('div');p.className='petal';p.style.left=x+'px';p.style.top=y+'px';
-  document.body.appendChild(p);const a=Math.PI*2*i/n+Math.random()*.4,d=40+Math.random()*50;
-  p.animate([{transform:'translate(-50%,-50%) scale(.4) rotate(0)',opacity:1},{transform:`translate(${Math.cos(a)*d}px,${Math.sin(a)*d+30}px) scale(1) rotate(${180+Math.random()*180}deg)`,opacity:0}],{duration:900+Math.random()*400,easing:'cubic-bezier(.2,.7,.3,1)'}).onfinish=()=>p.remove()}}
-document.addEventListener('click',e=>{if(e.target.closest('a,button,input,dialog,label'))return;burst(e.clientX,e.clientY)});
-
-/* ---------- easter egg: type "dosa" ---------- */
-let keys='';document.addEventListener('keydown',e=>{if(e.target.tagName==='INPUT')return;keys=(keys+e.key.toLowerCase()).slice(-4);
-  if(keys==='dosa'){toast('🫓 Dosa rain! You found the secret');for(let i=0;i<40;i++){const b=document.createElement('div');b.className='bean';
-    b.textContent=['🫓','🥥','✿','🌶️'][i%4];b.style.left=Math.random()*100+'vw';b.style.animationDuration=(2+Math.random()*2.5)+'s';b.style.animationDelay=Math.random()*1.2+'s';
-    document.body.appendChild(b);setTimeout(()=>b.remove(),5000)}}});
 </script>
 </body>
 </html>
